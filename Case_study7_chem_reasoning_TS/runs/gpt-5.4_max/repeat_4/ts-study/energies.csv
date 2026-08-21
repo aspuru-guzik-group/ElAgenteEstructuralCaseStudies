@@ -1,0 +1,7 @@
+pathway,structure,energy_Eh,relative_to_lowest_substrate_kcal_mol,relative_to_pathway_substrate_kcal_mol,imag_freq_cm-1
+A,substrate,-27.889159613456,0.000,0.000,
+A,TS,-27.839618424213,31.088,31.088,-1270.429
+A,product,-27.862667610821,16.624,16.624,
+B,substrate,-27.872989509094,10.147,0.000,
+B,TS,-27.856707224250,20.364,10.217,-381.4632
+B,product,-27.861377864121,17.433,7.286,

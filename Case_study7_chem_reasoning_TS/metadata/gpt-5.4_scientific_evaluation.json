@@ -1,0 +1,790 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-20T07:20:31.873094+00:00",
+  "benchmark": {
+    "project": "EA_ER_C7_DirectGuess_GPT56_GPT54_Max",
+    "models": [
+      "gpt-5.4"
+    ],
+    "reasoning_effort": "max",
+    "repetitions_per_model": 5,
+    "workers": 5,
+    "case_number": 7,
+    "question": "Using TS.png, set the substituent on the ring carbon alpha to sulfur to Me, all other peripheral ring substituents to H, and the N-alkyl group to Me. The exchangeable N-H can equilibrate between the two ring nitrogens before N-alkylation, producing two neutral, compositionally identical starting structures and two possible reaction pathways. Infer both starting structures, the transformation involved, and the corresponding products. For each pathway, build the substrate and product geometries, generate a transition-state guess by directly editing the substrate geometry, then refine it using Sella optTS at xTB level and verify it by frequency analysis. Report consistent relative energies for both pathways. Save all structures, calculations, energy data, and a concise mechanistic report. Use the following file structure: ts-study/\n├── structures/\n│   ├── pathway_A_substrate.xyz\n│   ├── pathway_A_TS_Initial_Guess.xyz\n│   ├── pathway_A_TS_optimized.xyz\n│   ├── pathway_A_product.xyz\n│   ├── pathway_B_substrate.xyz\n│   ├── pathway_B_TS_Initial_Guess.xyz\n│   ├── pathway_B_TS_optimized.xyz\n│   └── pathway_B_product.xyz\n├── calculations/\n│   ├── pathway_A/\n│   └── pathway_B/\n├── energies.csv\n└── report.md",
+    "question_sha256": "04094f5ab1c49b9d38841f7dff5dd3d73e1ecfbdb512a5e792220acec3165b53",
+    "source_manifest": "/h/399/yunhengzou/estructural_revision/ElAgente/benchmark_results/estructural_case7_direct_guess_gpt56sol_gpt54_max_5x.json"
+  },
+  "summary": {
+    "runs": 5,
+    "completed": 5,
+    "artifact_complete": 5,
+    "total_tokens": 29475554,
+    "estimated_standard_text_token_cost_usd": 12.811337000000002,
+    "workflow_direct_edit_and_sella": 5,
+    "workflow_neb_pathfinder_or_scan": 0,
+    "ground_truth_contaminated_runs": 0,
+    "verdict_counts": {
+      "pass": 1,
+      "partial": 2,
+      "fail": 2
+    }
+  },
+  "methodology_notes": [
+    "Workflow classifications come from Mongo agent_history tool calls.",
+    "Ground-truth connectivity is inferred from XYZ distances using 1.25 times summed ASE covalent radii.",
+    "Mapped RMSD uses heavy-atom graph isomorphisms and Kabsch alignment.",
+    "Costs use official standard text-token rates; tool fees excluded.",
+    "Scientific verdicts distinguish benchmark contamination from chemistry failure."
+  ],
+  "runs": [
+    {
+      "session_id": "Estructural_Case7__gpt-5.4__max__repeat_1__21af4fe2",
+      "model": "gpt-5.4",
+      "reasoning_effort": "max",
+      "repetition": 1,
+      "status": "completed",
+      "started_at": "2026-08-20T06:12:19.883341+00:00",
+      "finished_at": "2026-08-20T06:50:55.724851+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 2315.841511230916,
+        "thread_cpu_seconds": 81.76442607199999,
+        "observed_process_cpu_seconds": 1348.821749369,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.4__max__repeat_1__21af4fe2",
+      "usage": {
+        "input_tokens": 3790389,
+        "cached_input_tokens": 3682048,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 42570,
+        "total_tokens": 3832959
+      },
+      "estimated_standard_text_token_cost_usd": 1.829915,
+      "workflow": {
+        "history_steps": 74,
+        "constraint_xtb_calls": 14,
+        "sella_references": 14,
+        "neb_references": 0,
+        "pathfinder_references": 0,
+        "scan_references": 0,
+        "direct_edit_references": 8,
+        "ground_truth_access_references": 0
+      },
+      "artifacts_complete": true,
+      "artifacts": [
+        {
+          "path": "ts-study/structures/pathway_A_substrate.xyz",
+          "sha256": "4e11ef7d53568933f88c3c6ef7e3e88c32ee02d16fa0e3a44cdfc448d7d6f9c6",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_Initial_Guess.xyz",
+          "sha256": "912176fd8f14cf14ef01af090fcf3b23ca8a2141cfb6deae012464b4dc74bd43",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "sha256": "22360addaefd9ae2ed67ed850e90317551d6bee92d6d847e97f8fb4b47a0bdca",
+          "bytes": 2349
+        },
+        {
+          "path": "ts-study/structures/pathway_A_product.xyz",
+          "sha256": "4d6c504f6e1f450befd6b20fc027f02abb9c99e2974b17794b79d78280727ed8",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_B_substrate.xyz",
+          "sha256": "376c9641b2845ae0543fbe9ad2c7e9830a7a89981e6b8007e7c40f3e8aaf18b3",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_Initial_Guess.xyz",
+          "sha256": "0fc123f34b4d216d5e29fca8c6621f5c3765c9cf466b7247240b6a2d7a066ded",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "sha256": "5c015011a66cd8911925f300140689b3a26ac0fec5260c6989a2ba3aaab85d5d",
+          "bytes": 2353
+        },
+        {
+          "path": "ts-study/structures/pathway_B_product.xyz",
+          "sha256": "de9e8fbdfa6a5199f707dc6b9325ba80c2d236c464a0de656c62b8053252f521",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/energies.csv",
+          "sha256": "fbbe0765431718c159f862a9a39c23d26a541eec4f8c6a223a7c573767e6f20c",
+          "bytes": 915
+        },
+        {
+          "path": "ts-study/report.md",
+          "sha256": "8ca0e3d0c17799267d90d50b55cab8062b1797b7134b2820e5f7004f21235e2d",
+          "bytes": 2853
+        }
+      ],
+      "ground_truth_comparison": [
+        {
+          "pathway": "A",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_A_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.047223
+        },
+        {
+          "pathway": "A",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.110282
+        },
+        {
+          "pathway": "A",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_A_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.000024
+        },
+        {
+          "pathway": "B",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_B_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 1.031052
+        },
+        {
+          "pathway": "B",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 1.498197
+        },
+        {
+          "pathway": "B",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_B_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.000951
+        }
+      ],
+      "frequency_report_signals": [
+        "- **Pathway A TS**: one significant imaginary frequency, **-433.00 cm^-1**.",
+        "- **Pathway B TS**: one significant imaginary frequency, **-389.26 cm^-1**."
+      ],
+      "scientific_verdict": "pass",
+      "scientific_note": "Correct chemistry; both reported first-order saddles."
+    },
+    {
+      "session_id": "Estructural_Case7__gpt-5.4__max__repeat_2__75d6a9a0",
+      "model": "gpt-5.4",
+      "reasoning_effort": "max",
+      "repetition": 2,
+      "status": "completed",
+      "started_at": "2026-08-20T06:12:19.883887+00:00",
+      "finished_at": "2026-08-20T06:57:15.011096+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 2695.127212855965,
+        "thread_cpu_seconds": 126.918331472,
+        "observed_process_cpu_seconds": 1552.322781687,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.4__max__repeat_2__75d6a9a0",
+      "usage": {
+        "input_tokens": 7322242,
+        "cached_input_tokens": 7151872,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 50640,
+        "total_tokens": 7372882
+      },
+      "estimated_standard_text_token_cost_usd": 2.973493,
+      "workflow": {
+        "history_steps": 114,
+        "constraint_xtb_calls": 2,
+        "sella_references": 46,
+        "neb_references": 0,
+        "pathfinder_references": 0,
+        "scan_references": 0,
+        "direct_edit_references": 15,
+        "ground_truth_access_references": 0
+      },
+      "artifacts_complete": true,
+      "artifacts": [
+        {
+          "path": "ts-study/structures/pathway_A_substrate.xyz",
+          "sha256": "5184c55e95e52d317a1511e4812afdbf78abd2b24aefcefef2939f31809205af",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_Initial_Guess.xyz",
+          "sha256": "728403ad50768ee1b4bc7e66a6812374ed3e0b41e535322c761d5da3e5d68de7",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "sha256": "db5f1be772d1486d6cb23bf6ead5524037946fb628f6c8a3c698899fc9f570c9",
+          "bytes": 2350
+        },
+        {
+          "path": "ts-study/structures/pathway_A_product.xyz",
+          "sha256": "5f2ae1e3a337233ca6600c02d700492ef629e4cabf6f2802af6319dcd6adecc7",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_B_substrate.xyz",
+          "sha256": "be869a6055bcf5f0e613af80e4b16ce3b69ca42a0271c1cefb8aaae325cfbebb",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_Initial_Guess.xyz",
+          "sha256": "534417145a218f5d3ef71fc2337ff87c08835ca44647b8e1af06bbfe8cf81c8d",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "sha256": "dcd9dd97fc4943179982372289a7f4d07dc1dbd2e08e785ea847b0867d141b0a",
+          "bytes": 2350
+        },
+        {
+          "path": "ts-study/structures/pathway_B_product.xyz",
+          "sha256": "5f2ae1e3a337233ca6600c02d700492ef629e4cabf6f2802af6319dcd6adecc7",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/energies.csv",
+          "sha256": "aaa34fc0e0712efde1bd8ad976a4c43d0638fbf21890e0efc89c2d51d71056f1",
+          "bytes": 727
+        },
+        {
+          "path": "ts-study/report.md",
+          "sha256": "2c04352cfde1eca5ca1167f2b770fbc15f16627be0a72e61473cb1f49ac3add0",
+          "bytes": 2929
+        }
+      ],
+      "ground_truth_comparison": [
+        {
+          "pathway": "A",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_A_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.001311
+        },
+        {
+          "pathway": "A",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.116545
+        },
+        {
+          "pathway": "A",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_A_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        },
+        {
+          "pathway": "B",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_B_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 1.020074
+        },
+        {
+          "pathway": "B",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 1.507525
+        },
+        {
+          "pathway": "B",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_B_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        }
+      ],
+      "frequency_report_signals": [
+        "- **Pathway A TS**: one imaginary frequency, **-429.52 cm^-1**",
+        "- **Pathway B TS**: one imaginary frequency, **-379.24 cm^-1**"
+      ],
+      "scientific_verdict": "partial",
+      "scientific_note": "TS diagnostics pass, but submitted product connectivity does not match both canonical products."
+    },
+    {
+      "session_id": "Estructural_Case7__gpt-5.4__max__repeat_3__cf14d77d",
+      "model": "gpt-5.4",
+      "reasoning_effort": "max",
+      "repetition": 3,
+      "status": "completed",
+      "started_at": "2026-08-20T06:12:19.884274+00:00",
+      "finished_at": "2026-08-20T06:49:08.459195+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 2208.5749254394323,
+        "thread_cpu_seconds": 62.420698388,
+        "observed_process_cpu_seconds": 1277.024838679,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.4__max__repeat_3__cf14d77d",
+      "usage": {
+        "input_tokens": 4439641,
+        "cached_input_tokens": 4317184,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 54570,
+        "total_tokens": 4494211
+      },
+      "estimated_standard_text_token_cost_usd": 2.203989,
+      "workflow": {
+        "history_steps": 61,
+        "constraint_xtb_calls": 0,
+        "sella_references": 12,
+        "neb_references": 0,
+        "pathfinder_references": 0,
+        "scan_references": 0,
+        "direct_edit_references": 6,
+        "ground_truth_access_references": 0
+      },
+      "artifacts_complete": true,
+      "artifacts": [
+        {
+          "path": "ts-study/structures/pathway_A_substrate.xyz",
+          "sha256": "45177f39f2682bd275c0f670db311a7f382747cad52e9267f2d2fdf9369beeec",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_Initial_Guess.xyz",
+          "sha256": "3cad7d8a61d364d59e7f711ed1431a8e5537075dda91434564b70b06465afdbf",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "sha256": "43746a4eb1eedce1d43ea584aa0354d435088bfbe29cbb07dec75f69da9becb8",
+          "bytes": 2349
+        },
+        {
+          "path": "ts-study/structures/pathway_A_product.xyz",
+          "sha256": "a1b32941679a9a05f233efc5f23ec5f3d02730b46fd75f7122321d2130d3009a",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_B_substrate.xyz",
+          "sha256": "209e1ed6d00f36429229557ec23c9cbe1e9c08c7ca71cba3f7654b01c5cfdb6d",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_Initial_Guess.xyz",
+          "sha256": "f0c2d66ca4f9c68e962e030381895f80dbadf637025a3dac2641b3f09b6d8784",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "sha256": "2ca0638c88c95833bf920a30e98881f7ffb3ba35f81a92503259b6f2358c7a3b",
+          "bytes": 2351
+        },
+        {
+          "path": "ts-study/structures/pathway_B_product.xyz",
+          "sha256": "fd5db4a98983f85380f833ed79ef163c73edadacab03349c154a64b3fede10d6",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/energies.csv",
+          "sha256": "d67a53595d9c430e68f800577e946e8529b26d6bbda337a1176199badf9ed016",
+          "bytes": 1050
+        },
+        {
+          "path": "ts-study/report.md",
+          "sha256": "91016356c74f11d8eac36fdc1ac9e9de199837d3f5315fb5f977edb200ec624c",
+          "bytes": 3392
+        }
+      ],
+      "ground_truth_comparison": [
+        {
+          "pathway": "A",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_A_substrate.xyz",
+          "candidate_formula": "C5H8N4",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        },
+        {
+          "pathway": "A",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "candidate_formula": "C5H8N4",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        },
+        {
+          "pathway": "A",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_A_product.xyz",
+          "candidate_formula": "C5H8N4",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        },
+        {
+          "pathway": "B",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_B_substrate.xyz",
+          "candidate_formula": "C5H8N4",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        },
+        {
+          "pathway": "B",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "candidate_formula": "C5H8N4",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        },
+        {
+          "pathway": "B",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_B_product.xyz",
+          "candidate_formula": "C5H8N4",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        }
+      ],
+      "frequency_report_signals": [
+        "Interpretation: the dominant unstable mode is consistent with methyl transfer, but the xTB/Sella stationary point retains extra low-curvature directions and should be treated as a **soft, partially converged TS candidate rather than a rigorously clean first-order saddle**."
+      ],
+      "scientific_verdict": "fail",
+      "scientific_note": "Wrong C5H8N4 diazomethane methyl-transfer model."
+    },
+    {
+      "session_id": "Estructural_Case7__gpt-5.4__max__repeat_4__216019aa",
+      "model": "gpt-5.4",
+      "reasoning_effort": "max",
+      "repetition": 4,
+      "status": "completed",
+      "started_at": "2026-08-20T06:12:19.886309+00:00",
+      "finished_at": "2026-08-20T06:56:03.307944+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 2623.421658426523,
+        "thread_cpu_seconds": 101.50011066,
+        "observed_process_cpu_seconds": 1510.626316339,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.4__max__repeat_4__216019aa",
+      "usage": {
+        "input_tokens": 5389001,
+        "cached_input_tokens": 5245696,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 45132,
+        "total_tokens": 5434133
+      },
+      "estimated_standard_text_token_cost_usd": 2.346667,
+      "workflow": {
+        "history_steps": 93,
+        "constraint_xtb_calls": 2,
+        "sella_references": 28,
+        "neb_references": 0,
+        "pathfinder_references": 0,
+        "scan_references": 0,
+        "direct_edit_references": 5,
+        "ground_truth_access_references": 0
+      },
+      "artifacts_complete": true,
+      "artifacts": [
+        {
+          "path": "ts-study/structures/pathway_A_substrate.xyz",
+          "sha256": "0a05471fcfc0468e43f4632cc9ffbc07f8628fa06e6c866483610491181cee21",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_Initial_Guess.xyz",
+          "sha256": "f7aa5d901bf03198898fe6abfcc9078d358d639a72407b926d79997792b6b102",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "sha256": "a2491984bd1564e0f12d82a9ab9bd5a64470559807038847d75a4b929d3213a8",
+          "bytes": 2344
+        },
+        {
+          "path": "ts-study/structures/pathway_A_product.xyz",
+          "sha256": "e8c6fb350983c00349350980a8e30fbf4c85a58eb6912f612ff128000eeaf09e",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_B_substrate.xyz",
+          "sha256": "3404c255f1533fbf1bfe15195c45a69f0735fbad6a53b213dbd0a546f48a2646",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_Initial_Guess.xyz",
+          "sha256": "a09b3e10bc54f46656b15bf4094d11a4c9efabb4ccc077448c977ef606b19da6",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "sha256": "85ab8f6a6d25af74a88c632c33bdd436e28595695b00b6af59e695c182fbfd04",
+          "bytes": 2350
+        },
+        {
+          "path": "ts-study/structures/pathway_B_product.xyz",
+          "sha256": "67111f251c7ae4c219f5c2cf76f1f71f23e149d791c5ecff6c928284e3d94546",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/energies.csv",
+          "sha256": "f54518bcb345d367d73a36bd3104387e0c7d4e13a98d5c854b1e8fa0ef7bd11a",
+          "bytes": 387
+        },
+        {
+          "path": "ts-study/report.md",
+          "sha256": "2589b6520426eaf2582f1ec5b891a47cd3b334bf987d207301ba1063865707c9",
+          "bytes": 3368
+        }
+      ],
+      "ground_truth_comparison": [
+        {
+          "pathway": "A",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_A_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.001206
+        },
+        {
+          "pathway": "A",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": false,
+          "mapped_heavy_atom_rmsd_angstrom": null
+        },
+        {
+          "pathway": "A",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_A_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.001117
+        },
+        {
+          "pathway": "B",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_B_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.004661
+        },
+        {
+          "pathway": "B",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.22976
+        },
+        {
+          "pathway": "B",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_B_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.001077
+        }
+      ],
+      "frequency_report_signals": [
+        "- **Pathway A TS:** one imaginary frequency, **-1270.4 cm-1**",
+        "- **Pathway B TS:** one imaginary frequency, **-381.5 cm-1**",
+        "Both optimized TS structures are first-order saddle points on the modeled singlet surface."
+      ],
+      "scientific_verdict": "partial",
+      "scientific_note": "Pathway B matches well; pathway A is a different high-curvature saddle with reported -1270 cm-1 mode."
+    },
+    {
+      "session_id": "Estructural_Case7__gpt-5.4__max__repeat_5__327da67c",
+      "model": "gpt-5.4",
+      "reasoning_effort": "max",
+      "repetition": 5,
+      "status": "completed",
+      "started_at": "2026-08-20T06:12:19.886915+00:00",
+      "finished_at": "2026-08-20T07:02:04.988297+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 2985.1013904418796,
+        "thread_cpu_seconds": 151.04592201999998,
+        "observed_process_cpu_seconds": 1622.611582646,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.4__max__repeat_5__327da67c",
+      "usage": {
+        "input_tokens": 8276380,
+        "cached_input_tokens": 8092672,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 64989,
+        "total_tokens": 8341369
+      },
+      "estimated_standard_text_token_cost_usd": 3.457273,
+      "workflow": {
+        "history_steps": 119,
+        "constraint_xtb_calls": 9,
+        "sella_references": 39,
+        "neb_references": 0,
+        "pathfinder_references": 0,
+        "scan_references": 0,
+        "direct_edit_references": 1,
+        "ground_truth_access_references": 0
+      },
+      "artifacts_complete": true,
+      "artifacts": [
+        {
+          "path": "ts-study/structures/pathway_A_substrate.xyz",
+          "sha256": "3785d2ef9975946f361ca2a47d4e33450548f5cb3c70b1d01e0e88ec7901e40c",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_Initial_Guess.xyz",
+          "sha256": "802400eb97812ef75bb63fe1627f83cc662bd0525a8a4ae9cbec8a4be0db16c2",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "sha256": "acf425deda7a4ffc4af2f444abea1dbe2b6c4245c6656132e2f8e762b7a5831d",
+          "bytes": 1950
+        },
+        {
+          "path": "ts-study/structures/pathway_A_product.xyz",
+          "sha256": "31766412538071a4746ea0ce9e56dfe22e6ae786b47fe399a8bc18125c82b66d",
+          "bytes": 964
+        },
+        {
+          "path": "ts-study/structures/pathway_B_substrate.xyz",
+          "sha256": "2e7dcce63876eb0cf150c909a8d447c9949b77c00e5ca4249b32361aaf4463cb",
+          "bytes": 1398
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_Initial_Guess.xyz",
+          "sha256": "36ca2c224d00f91ebc6af1fdd0debf8c80655cc33d4f34368fa24411e8e34b6d",
+          "bytes": 1046
+        },
+        {
+          "path": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "sha256": "ad659284afb29c0f536f67a0a060c4e6440329034e73836861b52cad654ff816",
+          "bytes": 2349
+        },
+        {
+          "path": "ts-study/structures/pathway_B_product.xyz",
+          "sha256": "ccaeebd03ed312dfa25f8f8a3f84d3afda528e805e30eec9fd7b9b7e1901fb86",
+          "bytes": 964
+        },
+        {
+          "path": "ts-study/energies.csv",
+          "sha256": "c8715f94b63385191f3b78b35291ead184608f09e59cc1c1676826dc74875b9d",
+          "bytes": 1044
+        },
+        {
+          "path": "ts-study/report.md",
+          "sha256": "e9cac3ac7ef370288add2ddaad8ebf53cb7a84c45e2ad084370c2bb095c832cc",
+          "bytes": 2881
+        }
+      ],
+      "ground_truth_comparison": [
+        {
+          "pathway": "A",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_A_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.00032
+        },
+        {
+          "pathway": "A",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_A_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.113669
+        },
+        {
+          "pathway": "A",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_A_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.003358
+        },
+        {
+          "pathway": "B",
+          "kind": "substrate",
+          "file": "ts-study/structures/pathway_B_substrate.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 1.036283
+        },
+        {
+          "pathway": "B",
+          "kind": "TS_optimized",
+          "file": "ts-study/structures/pathway_B_TS_optimized.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2OS",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 1.508778
+        },
+        {
+          "pathway": "B",
+          "kind": "product",
+          "file": "ts-study/structures/pathway_B_product.xyz",
+          "candidate_formula": "C5H8N2OS",
+          "reference_formula": "C5H8N2",
+          "reference_topology_component_found": true,
+          "mapped_heavy_atom_rmsd_angstrom": 0.002068
+        }
+      ],
+      "frequency_report_signals": [
+        "- For **both pathways**, the Sella-relaxed stationary points gave **0 imaginary frequencies** at GFN2-xTB.",
+        "- Additional frequency checks on constrained TS-like geometries also gave **0 imaginary frequencies**.",
+        "- Therefore, **no validated first-order saddle point was located for either pathway** on this closed-shell xTB surface.",
+        "| A | Sella-relaxed TS candidate | 23.09 | 23.09 | **not validated** (0 imag) |",
+        "| B | Sella-relaxed TS candidate | 20.44 | 10.26 | **not validated** (0 imag) |",
+        "- The closed-shell GFN2-xTB/Sella treatment did **not** locate a verified first-order saddle for the SO-extrusion/ring-contraction step, so the saved TS-optimized structures should be treated as **TS candidates only**."
+      ],
+      "scientific_verdict": "fail",
+      "scientific_note": "Both Sella-relaxed candidates have zero imaginary frequencies."
+    }
+  ]
+}

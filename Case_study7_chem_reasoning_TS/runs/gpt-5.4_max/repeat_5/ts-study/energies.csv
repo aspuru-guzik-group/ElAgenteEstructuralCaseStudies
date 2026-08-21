@@ -1,0 +1,7 @@
+pathway,state,model,charge,uhf,energy_hartree,relative_to_pathwayA_substrate_kcal_mol,relative_to_own_substrate_kcal_mol,imaginary_frequencies_below_-10_cm-1,notes
+A,substrate,GFN2-xTB minimum,0,0,-27.889159766156105,0.0,0.0,n/a,N-methyl on sulfur-adjacent ring N; lower-energy substrate isomer
+A,TS_optimized,Sella/xtb stationary point,0,0,-27.85236007197623,23.09215673817516,23.09215673817516,0,Frequency check: no imaginary mode; not a validated TS
+A,product,pyrazole + SO (fragment energy sum),0,0,-27.862522226959328,16.715308210023935,16.715308210023935,n/a,1-methyl-5-methylpyrazole + SO
+B,substrate,GFN2-xTB minimum,0,0,-27.87294484227978,10.175018352583546,0.0,n/a,N-methyl on the other ring N; higher-energy substrate isomer
+B,TS_optimized,Sella/xtb stationary point,0,0,-27.85659205367477,20.436548128545514,10.26152977596197,0,Frequency check: no imaginary mode; not a validated TS
+B,product,pyrazole + SO (fragment energy sum),0,0,-27.861285189236664,17.491561100690863,7.316542748107316,n/a,2-methyl-5-methylpyrazole + SO

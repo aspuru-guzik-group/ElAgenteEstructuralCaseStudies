@@ -1,0 +1,7 @@
+pathway,species,model,energy_Eh,rel_to_pathA_substrate_kcal_mol,rel_to_own_substrate_kcal_mol,imag_freq_cm^-1
+A,substrate,"singlet N-methyl TDSO (N adjacent to S=O alkylated)",-27.889160547093,0.000,0.000,
+A,TS,"singlet Sella optTS, SO extrusion / pyrazole ring closure",-27.852713488977,22.871,22.871,-429.52
+A,product,"1,3-dimethylpyrazole (singlet) + SO (triplet); fragment-energy sum",-27.857619594358,19.792,19.792,
+B,substrate,"singlet N-methyl TDSO (distal ring N alkylated)",-27.872417233821,10.507,0.000,
+B,TS,"singlet Sella optTS, SO extrusion / pyrazole ring closure",-27.856633644485,20.411,9.904,-379.24
+B,product,"1,3-dimethylpyrazole (singlet) + SO (triplet); fragment-energy sum",-27.857619594358,19.792,9.286,

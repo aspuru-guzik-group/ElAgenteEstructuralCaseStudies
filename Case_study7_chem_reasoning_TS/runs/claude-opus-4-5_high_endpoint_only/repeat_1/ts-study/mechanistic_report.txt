@@ -1,0 +1,97 @@
+================================================================================
+               MECHANISTIC REPORT: NH-TDSO to N-Alkyl Pyrazole
+================================================================================
+
+TRANSFORMATION OVERVIEW
+-----------------------
+N-Methyl-1,2,3-thiadiazole 1-oxide → N-Methylpyrazole + SO (sulfur monoxide)
+
+This is a cheletropic extrusion reaction where sulfur monoxide (SO) is expelled
+from the five-membered 1,2,3-thiadiazole 1-oxide ring, forming a pyrazole product.
+
+SUBSTITUENT SPECIFICATIONS (per task requirements)
+-------------------------------------------------
+• Ring carbon alpha to sulfur (C5): Methyl (Me)
+• All other peripheral ring substituents: Hydrogen (H)
+• N-alkyl group: Methyl (Me)
+
+TAUTOMERIC EQUILIBRATION
+------------------------
+Before N-alkylation, the parent NH-TDSO can exist in two tautomeric forms:
+• 2H-tautomer: N-H on nitrogen adjacent to sulfur (N2)
+• 3H-tautomer: N-H on nitrogen NOT adjacent to sulfur (N3)
+
+N-methylation of each tautomer gives compositionally identical but 
+regioisomeric N-methyl substrates, leading to two distinct reaction pathways.
+
+================================================================================
+                              PATHWAY A
+================================================================================
+
+SUBSTRATE: 2-Methyl-5-methyl-1,2,3-thiadiazole 1-oxide
+  • N-methyl on N2 (adjacent to sulfur)
+  • Ring methyl on C5 (alpha to sulfur)
+  • Formula: C4H6N2OS
+  • File: pathway_A_substrate.xyz
+
+MECHANISM:
+  The N-methyl group is positioned on the nitrogen adjacent to the sulfoxide.
+  During SO extrusion, the C-S and N-S bonds break concertedly via a
+  cheletropic transition state, and a new C-N bond forms.
+
+PRODUCT: 1,3-Dimethyl-1H-pyrazole
+  • N-methyl on N1
+  • Ring methyl on C3 (same side of N-N bond as N-methyl)
+  • Formula: C5H8N2
+  • File: pathway_A_product.xyz
+
+================================================================================
+                              PATHWAY B
+================================================================================
+
+SUBSTRATE: 3-Methyl-5-methyl-1,2,3-thiadiazole 1-oxide
+  • N-methyl on N3 (NOT adjacent to sulfur)
+  • Ring methyl on C5 (alpha to sulfur)
+  • Formula: C4H6N2OS
+  • File: pathway_B_substrate.xyz
+
+MECHANISM:
+  The N-methyl group is positioned on the nitrogen NOT adjacent to sulfoxide.
+  During SO extrusion, the same concerted mechanism operates, but the
+  different N-methyl position leads to a different pyrazole regioisomer.
+
+PRODUCT: 1,5-Dimethyl-1H-pyrazole
+  • N-methyl on N1
+  • Ring methyl on C5 (opposite side of N-N bond from N-methyl)
+  • Formula: C5H8N2
+  • File: pathway_B_product.xyz
+
+================================================================================
+                         KEY MECHANISTIC FEATURES
+================================================================================
+
+1. TAUTOMERIC CONTROL: The position of the exchangeable N-H before alkylation
+   determines which nitrogen receives the N-methyl substituent.
+
+2. REGIOCHEMICAL OUTCOME: The two compositionally identical N-methyl-TDSO
+   substrates produce distinct pyrazole regioisomers (1,3- vs 1,5-dimethyl).
+
+3. CONCERTED EXTRUSION: SO extrusion is a thermally-allowed cheletropic
+   reaction that proceeds through a cyclic transition state.
+
+4. BOND REORGANIZATION:
+   • Bonds broken: C5-S, N-S (in both pathways)
+   • Bond formed: C5-N (connecting to form pyrazole ring)
+   • Expelled: SO (sulfur monoxide)
+
+================================================================================
+                           STRUCTURE FILES
+================================================================================
+
+ts-study/structures/
+├── pathway_A_substrate.xyz   (2-Me-5-Me-1,2,3-thiadiazole 1-oxide)
+├── pathway_A_product.xyz     (1,3-dimethyl-1H-pyrazole)
+├── pathway_B_substrate.xyz   (3-Me-5-Me-1,2,3-thiadiazole 1-oxide)
+└── pathway_B_product.xyz     (1,5-dimethyl-1H-pyrazole)
+
+================================================================================

@@ -1,0 +1,9 @@
+pathway,species,spin_model,energy_Eh,rel_to_lowest_substrate_kcal_mol,rel_to_own_substrate_kcal_mol,imag_freq_cm-1,comment
+A,substrate,singlet,-27.889130681822,0.000,0.000,,N-methyl TDSO substrate
+A,TS,singlet,-27.852552891741,22.953,22.953,-433.00,1 imaginary frequency
+A,product_pyrazole+SO,singlet_SO_same_surface,-27.862522459904,16.697,16.697,,Consistent singlet-surface comparison
+A,product_pyrazole+SO,triplet_SO_reference,-27.859888382571,18.350,18.350,,Separated SO triplet reference; spin-crossing caveat
+B,substrate,singlet,-27.872967353844,10.143,0.000,,N-methyl TDSO substrate
+B,TS,singlet,-27.856402471645,20.537,10.395,-389.26,1 imaginary frequency
+B,product_pyrazole+SO,singlet_SO_same_surface,-27.861290191860,17.470,7.328,,Consistent singlet-surface comparison
+B,product_pyrazole+SO,triplet_SO_reference,-27.858656114527,19.123,8.980,,Separated SO triplet reference; spin-crossing caveat

@@ -1,0 +1,9 @@
+pathway,species,energy_Eh,rel_to_own_substrate_complex_kcal_mol,rel_to_lowest_substrate_complex_kcal_mol,notes
+pathway_A,substrate_complex,-26.366956424258,0.0,0.9157742534499667,optimized prereactive complex
+pathway_A,separated_reactants,-26.366383888422,0.3592716612942517,1.2750459147442184,optimized pyrazole tautomer + optimized diazomethane
+pathway_A,TS,-26.366826777072,0.08135483749254697,0.9971290909425137,xTB single-point on Sella TS structure
+pathway_A,separated_products,-26.387605702135,-12.957617499077356,-12.041843245627389,optimized N-methylpyrazole + optimized N2
+pathway_B,substrate_complex,-26.368415803425,0.0,0.0,optimized prereactive complex
+pathway_B,separated_reactants,-26.367958659625,0.2868620654794231,0.2868620654794231,optimized pyrazole tautomer + optimized diazomethane
+pathway_B,TS,-26.368311892548,0.06520505976790283,0.06520505976790283,xTB single-point on Sella TS structure
+pathway_B,separated_products,-26.388842320851,-12.817833205642968,-12.817833205642968,optimized N-methylpyrazole + optimized N2

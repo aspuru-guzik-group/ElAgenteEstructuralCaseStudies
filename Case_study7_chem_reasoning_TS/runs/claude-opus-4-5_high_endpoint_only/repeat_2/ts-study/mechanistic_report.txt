@@ -1,0 +1,99 @@
+================================================================================
+                    MECHANISTIC REPORT: TDSO → PYRAZOLE TRANSFORMATION
+================================================================================
+
+REACTION OVERVIEW
+-----------------
+Transformation: 1,2,3-Thiadiazole S-Oxide (TDSO) → N-Methyl Pyrazole
+Mechanism: Cheletropic SO extrusion via concerted transition state
+
+SUBSTITUENT ASSIGNMENT
+----------------------
+• Ring carbon alpha to sulfur: -CH₃ (methyl)
+• All other peripheral ring substituents: -H
+• N-alkyl group: -CH₃ (methyl)
+
+================================================================================
+                           TAUTOMERIC EQUILIBRIUM
+================================================================================
+
+Before N-alkylation, the NH-TDSO exists in equilibrium between two tautomers:
+
+  Tautomer A: N-H on nitrogen adjacent to sulfur (N2 position)
+  Tautomer B: N-H on nitrogen remote from sulfur (N3 position)
+
+N-methylation of each tautomer generates compositionally identical but 
+regioisomeric substrates, leading to distinct reaction pathways.
+
+================================================================================
+                              PATHWAY A
+================================================================================
+
+Substrate: 2,5-Dimethyl-1,2,3-thiadiazole 1-oxide
+- N-methyl group on N2 (nitrogen adjacent to S)
+- Methyl substituent on C5 (carbon alpha to sulfur)
+- Molecular formula: C₄H₆N₂OS
+- Structure file: pathway_A_substrate.xyz
+
+Transformation:
+- SO extrusion occurs via cheletropic elimination
+- The S-N2 and S-C5 bonds cleave simultaneously
+- A new C-C bond forms as the pyrazole ring contracts
+
+Product: 1,4-Dimethylpyrazole
+- N-methyl at position 1
+- C-methyl at position 4 (two bonds from N-Me via carbon chain)
+- Molecular formula: C₅H₈N₂
+- Structure file: pathway_A_product.xyz
+
+================================================================================
+                              PATHWAY B
+================================================================================
+
+Substrate: 3,5-Dimethyl-1,2,3-thiadiazole 1-oxide
+- N-methyl group on N3 (nitrogen remote from S)
+- Methyl substituent on C5 (carbon alpha to sulfur)
+- Molecular formula: C₄H₆N₂OS
+- Structure file: pathway_B_substrate.xyz
+
+Transformation:
+- SO extrusion proceeds by the same cheletropic mechanism
+- Different N-methylation site leads to different ring closure topology
+
+Product: 1,3-Dimethylpyrazole
+- N-methyl at position 1
+- C-methyl at position 3 (adjacent to N-N bond via one carbon)
+- Molecular formula: C₅H₈N₂
+- Structure file: pathway_B_product.xyz
+
+================================================================================
+                         KEY MECHANISTIC FEATURES
+================================================================================
+
+1. Regioselectivity Origin:
+   The position of N-methylation determines the regiochemistry of the 
+   pyrazole product. When N-Me is on the nitrogen adjacent to S (Pathway A),
+   the carbon originally alpha to S becomes position 4 in the pyrazole.
+   When N-Me is on the remote nitrogen (Pathway B), that same carbon 
+   becomes position 3.
+
+2. Stereochemical Considerations:
+   The SO extrusion is typically suprafacial, proceeding through a 
+   planar transition state. Both pathways involve concerted bond 
+   reorganization.
+
+3. Driving Force:
+   Release of thermodynamically stable SO (sulfur monoxide) provides 
+   the energetic driving force for this transformation.
+
+================================================================================
+                          STRUCTURE FILES
+================================================================================
+
+ts-study/structures/
+├── pathway_A_substrate.xyz  (2,5-dimethyl-1,2,3-thiadiazole 1-oxide)
+├── pathway_A_product.xyz    (1,4-dimethylpyrazole)
+├── pathway_B_substrate.xyz  (3,5-dimethyl-1,2,3-thiadiazole 1-oxide)
+└── pathway_B_product.xyz    (1,3-dimethylpyrazole)
+
+================================================================================

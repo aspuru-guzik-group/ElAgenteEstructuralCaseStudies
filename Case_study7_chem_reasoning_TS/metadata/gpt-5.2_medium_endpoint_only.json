@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-20T13:41:06.986339+00:00",
+  "configuration": {
+    "branch": "geometry_operator_railway",
+    "models": [
+      "gpt-5.2"
+    ],
+    "reasoning_effort": "medium",
+    "entry_label": "geometry_operator",
+    "project": "EA_ER_C7_Baselines_Endpoints",
+    "questions_dir": "/h/399/yunhengzou/estructural_revision/ElAgente/Geometry_Operator/benchmark/Questions/EstructuralRevision",
+    "work_root": "/project/shared/el_agente_benchmark/estructural_revision",
+    "repetitions": 5,
+    "workers": 5,
+    "endpoint_only": true
+  },
+  "summary": {
+    "jobs": 5,
+    "completed": 1,
+    "errors": 4,
+    "elapsed_makespan_seconds": 1112.291195,
+    "job_wall_time_seconds_sum": 4667.639837328345,
+    "job_thread_cpu_seconds_sum": 357.099906563,
+    "input_tokens": 1099560,
+    "cached_input_tokens": 1040384,
+    "cache_creation_input_tokens": 0,
+    "output_tokens": 29907,
+    "total_tokens": 1129467,
+    "estimated_cost_usd": 0.0,
+    "estimated_cost_complete": false,
+    "per_case": {
+      "7": {
+        "jobs": 5,
+        "completed": 1,
+        "errors": 4,
+        "generated_file_count": 51
+      }
+    },
+    "per_model": {
+      "gpt-5.2": {
+        "jobs": 5,
+        "completed": 1,
+        "errors": 4,
+        "input_tokens": 1099560,
+        "cached_input_tokens": 1040384,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 29907,
+        "total_tokens": 1129467,
+        "estimated_cost_usd": 0.0
+      }
+    }
+  },
+  "results": [
+    {
+      "job_id": "Estructural_Case7__gpt-5.2__medium__repeat_1",
+      "case_number": 7,
+      "question_type": "EstructuralRevision_Case7",
+      "title": "Competing TDSO skeletal-editing pathways and energy profile",
+      "repetition": 1,
+      "session_id": "Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f",
+      "source_file": "/h/399/yunhengzou/estructural_revision/ElAgente/Geometry_Operator/benchmark/Questions/EstructuralRevision/case_7.json",
+      "model": "gpt-5.2",
+      "reasoning_effort": "medium",
+      "entry_label": "geometry_operator",
+      "project": "EA_ER_C7_Baselines_Endpoints",
+      "started_at": "2026-08-20T13:22:34.672150+00:00",
+      "status": "error",
+      "process": {
+        "pid": 3480332,
+        "thread_id": 139722182628928,
+        "hostname": "bosque1",
+        "platform": "Linux-5.15.0-174-generic-x86_64-with-glibc2.35",
+        "python": "3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:53:32) [GCC 12.3.0]"
+      },
+      "error": "OperationFailure('BSONObj size: 26987662 (0x19BCC8E) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f_c1853f38-76ac-46f6-a951-0d79699944bf\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-91c6-6f62-8010-d89bb6585319\", task_id: \"1b94a86b-443b-851d-6eaf-7e01a85e6808\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 26987662 (0x19BCC8E) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f_c1853f38-76ac-46f6-a951-0d79699944bf\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-91c6-6f62-8010-d89bb6585319\", task_id: \"1b94a86b-443b-851d-6eaf-7e01a85e6808\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+      "traceback": "Traceback (most recent call last):\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/scripts/benchmark_estructural_revision.py\", line 314, in run_job\n    messages = manager.stream(label=ENTRY_LABEL, user_input=prompt, print_=False)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_rules.py\", line 570, in stream\n    result = procedure_node.stream_return_graph_state(user_input=user_input,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 272, in stream_return_graph_state\n    raise e\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 259, in stream_return_graph_state\n    result = new_agent.stream_return_graph_state(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/langgraph_supporter.py\", line 366, in stream_return_graph_state\n    for event in self.agent.stream(input=self.formulate_input(user_input=user_input, user_input_clean=user_input_clean),config=self.config,stream_mode='values'):\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/main.py\", line 2579, in stream\n    with SyncPregelLoop(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_loop.py\", line 1138, in __exit__\n    return self.stack.__exit__(exc_type, exc_value, traceback)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 601, in __exit__\n    raise exc_details[1]\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 586, in __exit__\n    if cb(*exc_details):\n       ^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 117, in __exit__\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 80, in done\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/mongodb_checkpointer.py\", line 344, in put_writes\n    self.checkpoint_writes.bulk_write(operations)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/collection.py\", line 569, in bulk_write\n    bulk_api_result = blk.execute(write_concern, session)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 576, in execute\n    return self.execute_command(generator, write_concern, session)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 443, in execute_command\n    client._retryable_write(self.is_retryable, retryable_bulk, session, bulk=self)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1523, in _retryable_write\n    return self._retry_with_session(retryable, func, s, bulk)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1421, in _retry_with_session\n    return self._retry_internal(\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1462, in _retry_internal\n    ).run()\n      ^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2315, in run\n    return self._read() if self._is_read else self._write()\n                                              ^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2423, in _write\n    return self._func(self._session, conn, self._retryable)  # type: ignore\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 432, in retryable_bulk\n    self._execute_command(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 378, in _execute_command\n    result, to_send = bwc.execute(cmd, ops, client)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 964, in execute\n    result = self.write_command(cmd, request_id, msg, to_send)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 322, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 1058, in write_command\n    reply = self.conn.write_command(request_id, msg, self.codec)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/pool.py\", line 1060, in write_command\n    helpers._check_command_response(result, self.max_wire_version)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 230, in _check_command_response\n    raise OperationFailure(errmsg, code, response, max_wire_version)\npymongo.errors.OperationFailure: BSONObj size: 26987662 (0x19BCC8E) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f_c1853f38-76ac-46f6-a951-0d79699944bf\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-91c6-6f62-8010-d89bb6585319\", task_id: \"1b94a86b-443b-851d-6eaf-7e01a85e6808\", idx: 0 }, full error: {'ok': 0.0, 'errmsg': 'BSONObj size: 26987662 (0x19BCC8E) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f_c1853f38-76ac-46f6-a951-0d79699944bf\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-91c6-6f62-8010-d89bb6585319\", task_id: \"1b94a86b-443b-851d-6eaf-7e01a85e6808\", idx: 0 }', 'code': 10334, 'codeName': 'BSONObjectTooLarge'}\n",
+      "finished_at": "2026-08-20T13:40:13.899328+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 1059.2271692194045,
+        "thread_cpu_seconds": 111.86196326700001,
+        "observed_process_cpu_seconds": 852.939478276,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f",
+      "output_files": [
+        "TS.png",
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "generated_files": [
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "native_metrics": {
+        "session": "Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f",
+        "total": {
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "estimated_cost_usd": 0.0,
+          "invocation_wall_time_seconds_sum": 1044.707692667842,
+          "invocation_process_cpu_seconds_sum": 839.985772981,
+          "invocation_thread_cpu_seconds_sum": 104.77695337099999,
+          "invocation_count": 1,
+          "priced_invocation_count": 0,
+          "unpriced_invocation_count": 0,
+          "session_wall_time_seconds": 1044.708,
+          "process_count": 1,
+          "estimated_cost_complete": true
+        },
+        "invocations": [
+          {
+            "project": "EA_ER_C7_Baselines_Endpoints",
+            "session": "Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f",
+            "streaming_id": "374223f0-272e-445e-a0ca-1fa563f3fad2",
+            "agent_label": "geometry_operator",
+            "status": "error",
+            "sequence": 0,
+            "parent_label": null,
+            "start_timestamp": "2026-08-20T13:22:49.189000",
+            "timestamp": "2026-08-20T13:40:13.897000",
+            "process_id": 3480332,
+            "thread_id": 139722182628928,
+            "hostname": "bosque1",
+            "end_timestamp": "2026-08-20T13:40:13.897000",
+            "error": "OperationFailure('BSONObj size: 26987662 (0x19BCC8E) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f_c1853f38-76ac-46f6-a951-0d79699944bf\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-91c6-6f62-8010-d89bb6585319\", task_id: \"1b94a86b-443b-851d-6eaf-7e01a85e6808\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 26987662 (0x19BCC8E) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_1__933acf8f_c1853f38-76ac-46f6-a951-0d79699944bf\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-91c6-6f62-8010-d89bb6585319\", task_id: \"1b94a86b-443b-851d-6eaf-7e01a85e6808\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+            "process_cpu_seconds": 839.985772981,
+            "thread_cpu_seconds": 104.77695337099999,
+            "wall_time_seconds": 1044.707692667842
+          }
+        ]
+      },
+      "resolved_models": []
+    },
+    {
+      "job_id": "Estructural_Case7__gpt-5.2__medium__repeat_2",
+      "case_number": 7,
+      "question_type": "EstructuralRevision_Case7",
+      "title": "Competing TDSO skeletal-editing pathways and energy profile",
+      "repetition": 2,
+      "session_id": "Estructural_Case7__gpt-5.2__medium__repeat_2__75438750",
+      "source_file": "/h/399/yunhengzou/estructural_revision/ElAgente/Geometry_Operator/benchmark/Questions/EstructuralRevision/case_7.json",
+      "model": "gpt-5.2",
+      "reasoning_effort": "medium",
+      "entry_label": "geometry_operator",
+      "project": "EA_ER_C7_Baselines_Endpoints",
+      "started_at": "2026-08-20T13:22:34.673106+00:00",
+      "status": "error",
+      "process": {
+        "pid": 3480332,
+        "thread_id": 139722174219840,
+        "hostname": "bosque1",
+        "platform": "Linux-5.15.0-174-generic-x86_64-with-glibc2.35",
+        "python": "3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:53:32) [GCC 12.3.0]"
+      },
+      "error": "OperationFailure('BSONObj size: 26983378 (0x19BBBD2) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_2__75438750_0ab528bb-2db5-441d-a99d-f5b9edb87ee5\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-0f2e-6168-8010-8c88b164b257\", task_id: \"4faf5fe6-eb24-4f27-9489-6527917920e6\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 26983378 (0x19BBBD2) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_2__75438750_0ab528bb-2db5-441d-a99d-f5b9edb87ee5\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-0f2e-6168-8010-8c88b164b257\", task_id: \"4faf5fe6-eb24-4f27-9489-6527917920e6\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+      "traceback": "Traceback (most recent call last):\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/scripts/benchmark_estructural_revision.py\", line 314, in run_job\n    messages = manager.stream(label=ENTRY_LABEL, user_input=prompt, print_=False)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_rules.py\", line 570, in stream\n    result = procedure_node.stream_return_graph_state(user_input=user_input,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 272, in stream_return_graph_state\n    raise e\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 259, in stream_return_graph_state\n    result = new_agent.stream_return_graph_state(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/langgraph_supporter.py\", line 366, in stream_return_graph_state\n    for event in self.agent.stream(input=self.formulate_input(user_input=user_input, user_input_clean=user_input_clean),config=self.config,stream_mode='values'):\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/main.py\", line 2579, in stream\n    with SyncPregelLoop(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_loop.py\", line 1138, in __exit__\n    return self.stack.__exit__(exc_type, exc_value, traceback)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 601, in __exit__\n    raise exc_details[1]\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 586, in __exit__\n    if cb(*exc_details):\n       ^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 117, in __exit__\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 80, in done\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/mongodb_checkpointer.py\", line 344, in put_writes\n    self.checkpoint_writes.bulk_write(operations)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/collection.py\", line 569, in bulk_write\n    bulk_api_result = blk.execute(write_concern, session)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 576, in execute\n    return self.execute_command(generator, write_concern, session)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 443, in execute_command\n    client._retryable_write(self.is_retryable, retryable_bulk, session, bulk=self)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1523, in _retryable_write\n    return self._retry_with_session(retryable, func, s, bulk)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1421, in _retry_with_session\n    return self._retry_internal(\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1462, in _retry_internal\n    ).run()\n      ^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2315, in run\n    return self._read() if self._is_read else self._write()\n                                              ^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2423, in _write\n    return self._func(self._session, conn, self._retryable)  # type: ignore\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 432, in retryable_bulk\n    self._execute_command(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 378, in _execute_command\n    result, to_send = bwc.execute(cmd, ops, client)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 964, in execute\n    result = self.write_command(cmd, request_id, msg, to_send)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 322, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 1058, in write_command\n    reply = self.conn.write_command(request_id, msg, self.codec)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/pool.py\", line 1060, in write_command\n    helpers._check_command_response(result, self.max_wire_version)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 230, in _check_command_response\n    raise OperationFailure(errmsg, code, response, max_wire_version)\npymongo.errors.OperationFailure: BSONObj size: 26983378 (0x19BBBD2) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_2__75438750_0ab528bb-2db5-441d-a99d-f5b9edb87ee5\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-0f2e-6168-8010-8c88b164b257\", task_id: \"4faf5fe6-eb24-4f27-9489-6527917920e6\", idx: 0 }, full error: {'ok': 0.0, 'errmsg': 'BSONObj size: 26983378 (0x19BBBD2) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_2__75438750_0ab528bb-2db5-441d-a99d-f5b9edb87ee5\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-0f2e-6168-8010-8c88b164b257\", task_id: \"4faf5fe6-eb24-4f27-9489-6527917920e6\", idx: 0 }', 'code': 10334, 'codeName': 'BSONObjectTooLarge'}\n",
+      "finished_at": "2026-08-20T13:32:19.802611+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 585.1295089572668,
+        "thread_cpu_seconds": 49.169761175,
+        "observed_process_cpu_seconds": 374.077542122,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.2__medium__repeat_2__75438750",
+      "output_files": [
+        "TS.png",
+        "TS_left_zoom.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/.pathway_A_substrate.xyz.view.json",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "generated_files": [
+        "TS_left_zoom.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/.pathway_A_substrate.xyz.view.json",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "native_metrics": {
+        "session": "Estructural_Case7__gpt-5.2__medium__repeat_2__75438750",
+        "total": {
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "estimated_cost_usd": 0.0,
+          "invocation_wall_time_seconds_sum": 570.6088749431074,
+          "invocation_process_cpu_seconds_sum": 361.119554879,
+          "invocation_thread_cpu_seconds_sum": 48.451718488,
+          "invocation_count": 1,
+          "priced_invocation_count": 0,
+          "unpriced_invocation_count": 0,
+          "session_wall_time_seconds": 570.609,
+          "process_count": 1,
+          "estimated_cost_complete": true
+        },
+        "invocations": [
+          {
+            "project": "EA_ER_C7_Baselines_Endpoints",
+            "session": "Estructural_Case7__gpt-5.2__medium__repeat_2__75438750",
+            "streaming_id": "eaad888a-4269-42ac-8cb7-14f73df458ae",
+            "agent_label": "geometry_operator",
+            "status": "error",
+            "sequence": 0,
+            "parent_label": null,
+            "start_timestamp": "2026-08-20T13:22:49.190000",
+            "timestamp": "2026-08-20T13:32:19.799000",
+            "process_id": 3480332,
+            "thread_id": 139722174219840,
+            "hostname": "bosque1",
+            "end_timestamp": "2026-08-20T13:32:19.799000",
+            "error": "OperationFailure('BSONObj size: 26983378 (0x19BBBD2) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_2__75438750_0ab528bb-2db5-441d-a99d-f5b9edb87ee5\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-0f2e-6168-8010-8c88b164b257\", task_id: \"4faf5fe6-eb24-4f27-9489-6527917920e6\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 26983378 (0x19BBBD2) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_2__75438750_0ab528bb-2db5-441d-a99d-f5b9edb87ee5\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9aa-0f2e-6168-8010-8c88b164b257\", task_id: \"4faf5fe6-eb24-4f27-9489-6527917920e6\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+            "process_cpu_seconds": 361.119554879,
+            "thread_cpu_seconds": 48.451718488,
+            "wall_time_seconds": 570.6088749431074
+          }
+        ]
+      },
+      "resolved_models": []
+    },
+    {
+      "job_id": "Estructural_Case7__gpt-5.2__medium__repeat_3",
+      "case_number": 7,
+      "question_type": "EstructuralRevision_Case7",
+      "title": "Competing TDSO skeletal-editing pathways and energy profile",
+      "repetition": 3,
+      "session_id": "Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23",
+      "source_file": "/h/399/yunhengzou/estructural_revision/ElAgente/Geometry_Operator/benchmark/Questions/EstructuralRevision/case_7.json",
+      "model": "gpt-5.2",
+      "reasoning_effort": "medium",
+      "entry_label": "geometry_operator",
+      "project": "EA_ER_C7_Baselines_Endpoints",
+      "started_at": "2026-08-20T13:22:34.672698+00:00",
+      "status": "error",
+      "process": {
+        "pid": 3480332,
+        "thread_id": 139722165810752,
+        "hostname": "bosque1",
+        "platform": "Linux-5.15.0-174-generic-x86_64-with-glibc2.35",
+        "python": "3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:53:32) [GCC 12.3.0]"
+      },
+      "error": "OperationFailure('BSONObj size: 27012511 (0x19C2D9F) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23_483962a0-a2f5-409d-a01b-272fffc60847\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9ad-b4f9-6a77-8010-83dc8bb875c5\", task_id: \"886d0657-cb38-95d0-901b-26e9ec3bdab6\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 27012511 (0x19C2D9F) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23_483962a0-a2f5-409d-a01b-272fffc60847\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9ad-b4f9-6a77-8010-83dc8bb875c5\", task_id: \"886d0657-cb38-95d0-901b-26e9ec3bdab6\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+      "traceback": "Traceback (most recent call last):\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/scripts/benchmark_estructural_revision.py\", line 314, in run_job\n    messages = manager.stream(label=ENTRY_LABEL, user_input=prompt, print_=False)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_rules.py\", line 570, in stream\n    result = procedure_node.stream_return_graph_state(user_input=user_input,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 272, in stream_return_graph_state\n    raise e\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 259, in stream_return_graph_state\n    result = new_agent.stream_return_graph_state(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/langgraph_supporter.py\", line 366, in stream_return_graph_state\n    for event in self.agent.stream(input=self.formulate_input(user_input=user_input, user_input_clean=user_input_clean),config=self.config,stream_mode='values'):\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/main.py\", line 2579, in stream\n    with SyncPregelLoop(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_loop.py\", line 1138, in __exit__\n    return self.stack.__exit__(exc_type, exc_value, traceback)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 601, in __exit__\n    raise exc_details[1]\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 586, in __exit__\n    if cb(*exc_details):\n       ^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 117, in __exit__\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 80, in done\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/mongodb_checkpointer.py\", line 344, in put_writes\n    self.checkpoint_writes.bulk_write(operations)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/collection.py\", line 569, in bulk_write\n    bulk_api_result = blk.execute(write_concern, session)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 576, in execute\n    return self.execute_command(generator, write_concern, session)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 443, in execute_command\n    client._retryable_write(self.is_retryable, retryable_bulk, session, bulk=self)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1523, in _retryable_write\n    return self._retry_with_session(retryable, func, s, bulk)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1421, in _retry_with_session\n    return self._retry_internal(\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1462, in _retry_internal\n    ).run()\n      ^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2315, in run\n    return self._read() if self._is_read else self._write()\n                                              ^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2423, in _write\n    return self._func(self._session, conn, self._retryable)  # type: ignore\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 432, in retryable_bulk\n    self._execute_command(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 378, in _execute_command\n    result, to_send = bwc.execute(cmd, ops, client)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 964, in execute\n    result = self.write_command(cmd, request_id, msg, to_send)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 322, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 1058, in write_command\n    reply = self.conn.write_command(request_id, msg, self.codec)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/pool.py\", line 1060, in write_command\n    helpers._check_command_response(result, self.max_wire_version)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 230, in _check_command_response\n    raise OperationFailure(errmsg, code, response, max_wire_version)\npymongo.errors.OperationFailure: BSONObj size: 27012511 (0x19C2D9F) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23_483962a0-a2f5-409d-a01b-272fffc60847\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9ad-b4f9-6a77-8010-83dc8bb875c5\", task_id: \"886d0657-cb38-95d0-901b-26e9ec3bdab6\", idx: 0 }, full error: {'ok': 0.0, 'errmsg': 'BSONObj size: 27012511 (0x19C2D9F) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23_483962a0-a2f5-409d-a01b-272fffc60847\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9ad-b4f9-6a77-8010-83dc8bb875c5\", task_id: \"886d0657-cb38-95d0-901b-26e9ec3bdab6\", idx: 0 }', 'code': 10334, 'codeName': 'BSONObjectTooLarge'}\n",
+      "finished_at": "2026-08-20T13:38:05.446150+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 930.7734367419034,
+        "thread_cpu_seconds": 89.510508906,
+        "observed_process_cpu_seconds": 760.5652994000001,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23",
+      "output_files": [
+        "TS.png",
+        "TS_left_tight.png",
+        "TS_left_tight2.png",
+        "TS_left_zoom.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "generated_files": [
+        "TS_left_tight.png",
+        "TS_left_tight2.png",
+        "TS_left_zoom.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "native_metrics": {
+        "session": "Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23",
+        "total": {
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "estimated_cost_usd": 0.0,
+          "invocation_wall_time_seconds_sum": 917.9805645365268,
+          "invocation_process_cpu_seconds_sum": 749.36970231,
+          "invocation_thread_cpu_seconds_sum": 88.712351809,
+          "invocation_count": 1,
+          "priced_invocation_count": 0,
+          "unpriced_invocation_count": 0,
+          "session_wall_time_seconds": 917.981,
+          "process_count": 1,
+          "estimated_cost_complete": true
+        },
+        "invocations": [
+          {
+            "project": "EA_ER_C7_Baselines_Endpoints",
+            "session": "Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23",
+            "streaming_id": "0b25ddf1-794a-4705-904a-902bc82a7b33",
+            "agent_label": "geometry_operator",
+            "status": "error",
+            "sequence": 0,
+            "parent_label": null,
+            "start_timestamp": "2026-08-20T13:22:47.463000",
+            "timestamp": "2026-08-20T13:38:05.444000",
+            "process_id": 3480332,
+            "thread_id": 139722165810752,
+            "hostname": "bosque1",
+            "end_timestamp": "2026-08-20T13:38:05.444000",
+            "error": "OperationFailure('BSONObj size: 27012511 (0x19C2D9F) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23_483962a0-a2f5-409d-a01b-272fffc60847\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9ad-b4f9-6a77-8010-83dc8bb875c5\", task_id: \"886d0657-cb38-95d0-901b-26e9ec3bdab6\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 27012511 (0x19C2D9F) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_3__9e5f9e23_483962a0-a2f5-409d-a01b-272fffc60847\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9ad-b4f9-6a77-8010-83dc8bb875c5\", task_id: \"886d0657-cb38-95d0-901b-26e9ec3bdab6\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+            "process_cpu_seconds": 749.36970231,
+            "thread_cpu_seconds": 88.712351809,
+            "wall_time_seconds": 917.9805645365268
+          }
+        ]
+      },
+      "resolved_models": []
+    },
+    {
+      "job_id": "Estructural_Case7__gpt-5.2__medium__repeat_4",
+      "case_number": 7,
+      "question_type": "EstructuralRevision_Case7",
+      "title": "Competing TDSO skeletal-editing pathways and energy profile",
+      "repetition": 4,
+      "session_id": "Estructural_Case7__gpt-5.2__medium__repeat_4__e0882c1b",
+      "source_file": "/h/399/yunhengzou/estructural_revision/ElAgente/Geometry_Operator/benchmark/Questions/EstructuralRevision/case_7.json",
+      "model": "gpt-5.2",
+      "reasoning_effort": "medium",
+      "entry_label": "geometry_operator",
+      "project": "EA_ER_C7_Baselines_Endpoints",
+      "started_at": "2026-08-20T13:22:34.673349+00:00",
+      "status": "completed",
+      "process": {
+        "pid": 3480332,
+        "thread_id": 139722157401664,
+        "hostname": "bosque1",
+        "platform": "Linux-5.15.0-174-generic-x86_64-with-glibc2.35",
+        "python": "3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:53:32) [GCC 12.3.0]"
+      },
+      "response": "Plan & checks (executed)\n- Parsed **TS.png** to identify the reacting scaffold (NH pyrazole with two ring nitrogens) and the shown outcome (\u201cN\u2011alkyl pyrazole\u201d).\n- Applied the requested substituent simplifications (\u03b1-to-sulfur ring carbon = Me; other ring substituents = H; N\u2011alkyl = Me).\n- Built **two neutral tautomeric substrates** (N\u2013H on either ring N) and the **two corresponding N\u2011methyl products** (regioisomers).\n- Sanity-checked products/substrates by converting XYZ \u2192 SMILES and by inspecting N-atom neighbor lists to confirm which N bears H vs Me.\n\nKey inference/assumption (from TS.png)\n- TS.png depicts a sulfur-containing auxiliary in the substrate but **not** in the product drawing (\u201cN\u2011alkyl pyrazole\u201d), so the **product geometries were built without the S-containing group**.\n\nFiles written (requested XYZ + report)\n- `ts-study/structures/pathway_A_substrate.xyz`\n- `ts-study/structures/pathway_A_product.xyz`\n- `ts-study/structures/pathway_B_substrate.xyz`\n- `ts-study/structures/pathway_B_product.xyz`\n- `ts-study/mechanistic_report.txt`",
+      "finished_at": "2026-08-20T13:38:54.893380+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 980.2200324777514,
+        "thread_cpu_seconds": 58.256101786,
+        "observed_process_cpu_seconds": 786.238718479,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.2__medium__repeat_4__e0882c1b",
+      "output_files": [
+        "-",
+        "TS.png",
+        "TS_left_full2.png",
+        "TS_left_tight.png",
+        "TS_left_zoom.png",
+        "TS_right_tight.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "generated_files": [
+        "-",
+        "TS_left_full2.png",
+        "TS_left_tight.png",
+        "TS_left_zoom.png",
+        "TS_right_tight.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.txt",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_substrate.xyz"
+      ],
+      "native_metrics": {
+        "session": "Estructural_Case7__gpt-5.2__medium__repeat_4__e0882c1b",
+        "total": {
+          "input_tokens": 1099560,
+          "cached_input_tokens": 1040384,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 29907,
+          "total_tokens": 1129467,
+          "estimated_cost_usd": 0.0,
+          "invocation_wall_time_seconds_sum": 967.4308181982487,
+          "invocation_process_cpu_seconds_sum": 775.375416805,
+          "invocation_thread_cpu_seconds_sum": 57.678972591000004,
+          "invocation_count": 1,
+          "priced_invocation_count": 0,
+          "unpriced_invocation_count": 1,
+          "session_wall_time_seconds": 967.43,
+          "process_count": 1,
+          "estimated_cost_complete": false
+        },
+        "invocations": [
+          {
+            "project": "EA_ER_C7_Baselines_Endpoints",
+            "session": "Estructural_Case7__gpt-5.2__medium__repeat_4__e0882c1b",
+            "streaming_id": "cc2a9d98-9683-4685-9282-12f825d7bf8f",
+            "agent_label": "geometry_operator",
+            "status": "done",
+            "sequence": 0,
+            "parent_label": null,
+            "start_timestamp": "2026-08-20T13:22:47.079000",
+            "timestamp": "2026-08-20T13:38:54.509000",
+            "process_id": 3480332,
+            "thread_id": 139722157401664,
+            "hostname": "bosque1",
+            "end_timestamp": "2026-08-20T13:38:54.509000",
+            "process_cpu_seconds": 775.375416805,
+            "thread_cpu_seconds": 57.678972591000004,
+            "wall_time_seconds": 967.4308181982487,
+            "cost": null,
+            "model": "gpt-5.2",
+            "token_usage": {
+              "input_tokens": 1099560,
+              "cached_input_tokens": 1040384,
+              "cache_creation_input_tokens": 0,
+              "output_tokens": 29907,
+              "total_tokens": 1129467,
+              "events": [
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 14815,
+                  "cached_input_tokens": 13696,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 1672,
+                  "total_tokens": 16487
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 18116,
+                  "cached_input_tokens": 14592,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 1939,
+                  "total_tokens": 20055
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 20075,
+                  "cached_input_tokens": 16384,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 25,
+                  "total_tokens": 20100
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 21726,
+                  "cached_input_tokens": 19968,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 579,
+                  "total_tokens": 22305
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 23931,
+                  "cached_input_tokens": 19968,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 1857,
+                  "total_tokens": 25788
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 25807,
+                  "cached_input_tokens": 22144,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 26,
+                  "total_tokens": 25833
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 29379,
+                  "cached_input_tokens": 25600,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 124,
+                  "total_tokens": 29503
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 29516,
+                  "cached_input_tokens": 25728,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 26,
+                  "total_tokens": 29542
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 32780,
+                  "cached_input_tokens": 29440,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 15135,
+                  "total_tokens": 47915
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 47928,
+                  "cached_input_tokens": 29440,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 133,
+                  "total_tokens": 48061
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 48309,
+                  "cached_input_tokens": 47744,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 205,
+                  "total_tokens": 48514
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 48593,
+                  "cached_input_tokens": 48128,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 470,
+                  "total_tokens": 49063
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 49079,
+                  "cached_input_tokens": 48256,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 80,
+                  "total_tokens": 49159
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 49199,
+                  "cached_input_tokens": 48896,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 76,
+                  "total_tokens": 49275
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 49354,
+                  "cached_input_tokens": 49024,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 109,
+                  "total_tokens": 49463
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 49542,
+                  "cached_input_tokens": 49024,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 67,
+                  "total_tokens": 49609
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 49688,
+                  "cached_input_tokens": 49408,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 171,
+                  "total_tokens": 49859
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 49898,
+                  "cached_input_tokens": 49536,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 1584,
+                  "total_tokens": 51482
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 51495,
+                  "cached_input_tokens": 49792,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 38,
+                  "total_tokens": 51533
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 51585,
+                  "cached_input_tokens": 51328,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 4125,
+                  "total_tokens": 55710
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 55841,
+                  "cached_input_tokens": 51456,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 85,
+                  "total_tokens": 55926
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 55983,
+                  "cached_input_tokens": 55680,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 47,
+                  "total_tokens": 56030
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 56087,
+                  "cached_input_tokens": 55808,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 599,
+                  "total_tokens": 56686
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 56699,
+                  "cached_input_tokens": 55936,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 232,
+                  "total_tokens": 56931
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 56999,
+                  "cached_input_tokens": 56576,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 89,
+                  "total_tokens": 57088
+                },
+                {
+                  "model": "gpt-5.2-2025-12-11",
+                  "input_tokens": 57136,
+                  "cached_input_tokens": 56832,
+                  "cache_creation_input_tokens": 0,
+                  "output_tokens": 414,
+                  "total_tokens": 57550
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "resolved_models": [
+        "gpt-5.2-2025-12-11"
+      ]
+    },
+    {
+      "job_id": "Estructural_Case7__gpt-5.2__medium__repeat_5",
+      "case_number": 7,
+      "question_type": "EstructuralRevision_Case7",
+      "title": "Competing TDSO skeletal-editing pathways and energy profile",
+      "repetition": 5,
+      "session_id": "Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142",
+      "source_file": "/h/399/yunhengzou/estructural_revision/ElAgente/Geometry_Operator/benchmark/Questions/EstructuralRevision/case_7.json",
+      "model": "gpt-5.2",
+      "reasoning_effort": "medium",
+      "entry_label": "geometry_operator",
+      "project": "EA_ER_C7_Baselines_Endpoints",
+      "started_at": "2026-08-20T13:22:34.673653+00:00",
+      "status": "error",
+      "process": {
+        "pid": 3480332,
+        "thread_id": 139722148992576,
+        "hostname": "bosque1",
+        "platform": "Linux-5.15.0-174-generic-x86_64-with-glibc2.35",
+        "python": "3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:53:32) [GCC 12.3.0]"
+      },
+      "error": "OperationFailure('BSONObj size: 17528624 (0x10B7730) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142_20cdac1e-9562-4839-b259-57adeeaeb62a\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9b1-2953-6c7f-801c-6889a85564e1\", task_id: \"adc293ca-04af-a0b7-81d5-cd0d139f9a38\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 17528624 (0x10B7730) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142_20cdac1e-9562-4839-b259-57adeeaeb62a\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9b1-2953-6c7f-801c-6889a85564e1\", task_id: \"adc293ca-04af-a0b7-81d5-cd0d139f9a38\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+      "traceback": "Traceback (most recent call last):\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/scripts/benchmark_estructural_revision.py\", line 314, in run_job\n    messages = manager.stream(label=ENTRY_LABEL, user_input=prompt, print_=False)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_rules.py\", line 570, in stream\n    result = procedure_node.stream_return_graph_state(user_input=user_input,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 272, in stream_return_graph_state\n    raise e\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/net_procedure_node.py\", line 259, in stream_return_graph_state\n    result = new_agent.stream_return_graph_state(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/langgraph_supporter.py\", line 366, in stream_return_graph_state\n    for event in self.agent.stream(input=self.formulate_input(user_input=user_input, user_input_clean=user_input_clean),config=self.config,stream_mode='values'):\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/main.py\", line 2579, in stream\n    with SyncPregelLoop(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_loop.py\", line 1138, in __exit__\n    return self.stack.__exit__(exc_type, exc_value, traceback)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 601, in __exit__\n    raise exc_details[1]\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/contextlib.py\", line 586, in __exit__\n    if cb(*exc_details):\n       ^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 117, in __exit__\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/langgraph/pregel/_executor.py\", line 80, in done\n    task.result()\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/concurrent/futures/thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/estructural_revision/ElAgente/ElAgente/Agent/mongodb_checkpointer.py\", line 344, in put_writes\n    self.checkpoint_writes.bulk_write(operations)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/collection.py\", line 569, in bulk_write\n    bulk_api_result = blk.execute(write_concern, session)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 576, in execute\n    return self.execute_command(generator, write_concern, session)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 443, in execute_command\n    client._retryable_write(self.is_retryable, retryable_bulk, session, bulk=self)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1523, in _retryable_write\n    return self._retry_with_session(retryable, func, s, bulk)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1421, in _retry_with_session\n    return self._retry_internal(\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/_csot.py\", line 107, in csot_wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 1462, in _retry_internal\n    ).run()\n      ^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2315, in run\n    return self._read() if self._is_read else self._write()\n                                              ^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/mongo_client.py\", line 2423, in _write\n    return self._func(self._session, conn, self._retryable)  # type: ignore\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 432, in retryable_bulk\n    self._execute_command(\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/bulk.py\", line 378, in _execute_command\n    result, to_send = bwc.execute(cmd, ops, client)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 964, in execute\n    result = self.write_command(cmd, request_id, msg, to_send)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 322, in inner\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/message.py\", line 1058, in write_command\n    reply = self.conn.write_command(request_id, msg, self.codec)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/pool.py\", line 1060, in write_command\n    helpers._check_command_response(result, self.max_wire_version)\n  File \"/h/399/yunhengzou/micromamba/envs/el-agente/lib/python3.11/site-packages/pymongo/helpers.py\", line 230, in _check_command_response\n    raise OperationFailure(errmsg, code, response, max_wire_version)\npymongo.errors.OperationFailure: BSONObj size: 17528624 (0x10B7730) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142_20cdac1e-9562-4839-b259-57adeeaeb62a\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9b1-2953-6c7f-801c-6889a85564e1\", task_id: \"adc293ca-04af-a0b7-81d5-cd0d139f9a38\", idx: 0 }, full error: {'ok': 0.0, 'errmsg': 'BSONObj size: 17528624 (0x10B7730) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142_20cdac1e-9562-4839-b259-57adeeaeb62a\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9b1-2953-6c7f-801c-6889a85564e1\", task_id: \"adc293ca-04af-a0b7-81d5-cd0d139f9a38\", idx: 0 }', 'code': 10334, 'codeName': 'BSONObjectTooLarge'}\n",
+      "finished_at": "2026-08-20T13:41:06.963345+00:00",
+      "benchmark_timing": {
+        "wall_time_seconds": 1112.2896899320185,
+        "thread_cpu_seconds": 48.301571429,
+        "observed_process_cpu_seconds": 867.4474577819999,
+        "observed_process_cpu_includes_concurrent_jobs": true
+      },
+      "working_directory": "/project/shared/el_agente_benchmark/estructural_revision/Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142",
+      "output_files": [
+        "TS.png",
+        "TS_left.png",
+        "TS_left_ring_zoom.png",
+        "TS_left_zoom.png",
+        "TS_right.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.md",
+        "ts-study/structures/pathway_A_product.log",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_product_raw.xyz",
+        "ts-study/structures/pathway_A_substrate.log",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_A_substrate_raw.xyz",
+        "ts-study/structures/pathway_B_product.log",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_product_raw.xyz",
+        "ts-study/structures/pathway_B_substrate.log",
+        "ts-study/structures/pathway_B_substrate.xyz",
+        "ts-study/structures/pathway_B_substrate_raw.xyz"
+      ],
+      "generated_files": [
+        "TS_left.png",
+        "TS_left_ring_zoom.png",
+        "TS_left_zoom.png",
+        "TS_right.png",
+        "TS_right_zoom.png",
+        "ts-study/mechanistic_report.md",
+        "ts-study/structures/pathway_A_product.log",
+        "ts-study/structures/pathway_A_product.xyz",
+        "ts-study/structures/pathway_A_product_raw.xyz",
+        "ts-study/structures/pathway_A_substrate.log",
+        "ts-study/structures/pathway_A_substrate.xyz",
+        "ts-study/structures/pathway_A_substrate_raw.xyz",
+        "ts-study/structures/pathway_B_product.log",
+        "ts-study/structures/pathway_B_product.xyz",
+        "ts-study/structures/pathway_B_product_raw.xyz",
+        "ts-study/structures/pathway_B_substrate.log",
+        "ts-study/structures/pathway_B_substrate.xyz",
+        "ts-study/structures/pathway_B_substrate_raw.xyz"
+      ],
+      "native_metrics": {
+        "session": "Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142",
+        "total": {
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0,
+          "estimated_cost_usd": 0.0,
+          "invocation_wall_time_seconds_sum": 1097.6593428160995,
+          "invocation_process_cpu_seconds_sum": 854.381838659,
+          "invocation_thread_cpu_seconds_sum": 47.602791685,
+          "invocation_count": 1,
+          "priced_invocation_count": 0,
+          "unpriced_invocation_count": 0,
+          "session_wall_time_seconds": 1097.659,
+          "process_count": 1,
+          "estimated_cost_complete": true
+        },
+        "invocations": [
+          {
+            "project": "EA_ER_C7_Baselines_Endpoints",
+            "session": "Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142",
+            "streaming_id": "d85b2d76-0a81-473b-9409-03650f1f2b93",
+            "agent_label": "geometry_operator",
+            "status": "error",
+            "sequence": 0,
+            "parent_label": null,
+            "start_timestamp": "2026-08-20T13:22:49.302000",
+            "timestamp": "2026-08-20T13:41:06.961000",
+            "process_id": 3480332,
+            "thread_id": 139722148992576,
+            "hostname": "bosque1",
+            "end_timestamp": "2026-08-20T13:41:06.961000",
+            "error": "OperationFailure('BSONObj size: 17528624 (0x10B7730) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142_20cdac1e-9562-4839-b259-57adeeaeb62a\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9b1-2953-6c7f-801c-6889a85564e1\", task_id: \"adc293ca-04af-a0b7-81d5-cd0d139f9a38\", idx: 0 }, full error: {\\'ok\\': 0.0, \\'errmsg\\': \\'BSONObj size: 17528624 (0x10B7730) is invalid. Size must be between 0 and 16793600(16MB) First element: q: { thread_id: \"geometry_operator_Estructural_Case7__gpt-5.2__medium__repeat_5__c4a8b142_20cdac1e-9562-4839-b259-57adeeaeb62a\", checkpoint_ns: \"\", checkpoint_id: \"1f19c9b1-2953-6c7f-801c-6889a85564e1\", task_id: \"adc293ca-04af-a0b7-81d5-cd0d139f9a38\", idx: 0 }\\', \\'code\\': 10334, \\'codeName\\': \\'BSONObjectTooLarge\\'}')",
+            "process_cpu_seconds": 854.381838659,
+            "thread_cpu_seconds": 47.602791685,
+            "wall_time_seconds": 1097.6593428160995
+          }
+        ]
+      },
+      "resolved_models": []
+    }
+  ]
+}

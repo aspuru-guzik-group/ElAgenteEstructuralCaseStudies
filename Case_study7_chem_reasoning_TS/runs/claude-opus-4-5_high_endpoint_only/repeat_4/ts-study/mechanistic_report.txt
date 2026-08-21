@@ -1,0 +1,98 @@
+================================================================================
+MECHANISTIC REPORT: NH-TDSO to N-Alkyl Pyrazole Transformation
+================================================================================
+
+REACTION OVERVIEW
+--------------------------------------------------------------------------------
+Transformation: NH-1,2,3-Thiadiazole 1-oxide (TDSO) → N-Alkyl Pyrazole
+Mechanism: Extrusion of sulfur monoxide (SO) with concurrent/sequential N-alkylation
+Substituent Pattern:
+  • α-carbon to S (position 5): Methyl (Me)
+  • Other peripheral ring positions: Hydrogen (H)
+  • N-alkyl group: Methyl (Me)
+
+TAUTOMERIC EQUILIBRIUM
+--------------------------------------------------------------------------------
+The NH proton in the TDSO starting material can equilibrate between the two 
+ring nitrogens, generating two neutral, compositionally identical tautomers:
+
+  Tautomer 2H: H on N2 (nitrogen adjacent to sulfur)
+  Tautomer 3H: H on N3 (nitrogen not adjacent to sulfur)
+
+This tautomerism leads to two distinct reaction pathways producing regioisomeric
+N-methylpyrazole products.
+
+================================================================================
+PATHWAY A
+================================================================================
+
+SUBSTRATE: 5-Methyl-2H-1,2,3-thiadiazole 1-oxide
+  • Structure: 5-membered ring containing S(=O), two N atoms, and two C atoms
+  • Ring connectivity: S(1)-N(2,H)-N(3)=C(4)-C(5,Me)
+  • Key feature: NH on N2 (adjacent to sulfur)
+  • File: ts-study/structures/pathway_A_substrate.xyz
+  • Molecular formula: C3H4N2OS
+
+TRANSFORMATION:
+  1. N-alkylation occurs at N2 (the nitrogen bearing H)
+  2. Extrusion of sulfur monoxide (SO) from the ring
+  3. Ring contraction/rearrangement to form pyrazole
+
+PRODUCT: 1,3-Dimethylpyrazole
+  • Structure: 5-membered pyrazole ring with N-Me and C-Me substituents
+  • Ring connectivity: N(1,Me)-N(2)=C(3,Me)-C(4)-C(5)
+  • Key feature: C-methyl at position 3 (adjacent to N2, the unalkylated nitrogen)
+  • File: ts-study/structures/pathway_A_product.xyz
+  • Molecular formula: C5H8N2
+
+================================================================================
+PATHWAY B
+================================================================================
+
+SUBSTRATE: 5-Methyl-3H-1,2,3-thiadiazole 1-oxide
+  • Structure: 5-membered ring containing S(=O), two N atoms, and two C atoms
+  • Ring connectivity: S(1)-N(2)=N(3,H)-C(4)-C(5,Me)
+  • Key feature: NH on N3 (not adjacent to sulfur)
+  • File: ts-study/structures/pathway_B_substrate.xyz
+  • Molecular formula: C3H4N2OS
+
+TRANSFORMATION:
+  1. N-alkylation occurs at N3 (the nitrogen bearing H)
+  2. Extrusion of sulfur monoxide (SO) from the ring
+  3. Ring contraction/rearrangement to form pyrazole
+
+PRODUCT: 1,5-Dimethylpyrazole
+  • Structure: 5-membered pyrazole ring with N-Me and C-Me substituents
+  • Ring connectivity: N(1,Me)-N(2)=C(3)-C(4)-C(5,Me)
+  • Key feature: C-methyl at position 5 (adjacent to N1, the alkylated nitrogen)
+  • File: ts-study/structures/pathway_B_product.xyz
+  • Molecular formula: C5H8N2
+
+================================================================================
+STRUCTURAL SUMMARY
+================================================================================
+
+                    Pathway A                    Pathway B
+                    ---------                    ---------
+SUBSTRATE:          2H-TDSO (H on N2)           3H-TDSO (H on N3)
+                    NH adjacent to S             NH not adjacent to S
+
+PRODUCT:            1,3-Dimethylpyrazole        1,5-Dimethylpyrazole
+                    C-Me adjacent to N2          C-Me adjacent to N1
+                    (opposite to N-Me)           (same as N-Me)
+
+REGIOCHEMISTRY:     The position of the N-H in the TDSO tautomer determines
+                    which nitrogen becomes N-methylated, thereby controlling
+                    the relative positions of N-Me and C-Me in the pyrazole
+                    product.
+
+================================================================================
+FILE LISTING
+================================================================================
+ts-study/structures/pathway_A_substrate.xyz  - 2H-TDSO (GFN2-xTB optimized)
+ts-study/structures/pathway_A_product.xyz    - 1,3-Dimethylpyrazole (optimized)
+ts-study/structures/pathway_B_substrate.xyz  - 3H-TDSO (GFN2-xTB optimized)
+ts-study/structures/pathway_B_product.xyz    - 1,5-Dimethylpyrazole (optimized)
+ts-study/mechanistic_report.txt              - This report
+
+================================================================================

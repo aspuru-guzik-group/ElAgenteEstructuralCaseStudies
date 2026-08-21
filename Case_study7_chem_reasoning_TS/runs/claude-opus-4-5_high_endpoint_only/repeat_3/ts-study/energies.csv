@@ -1,0 +1,10 @@
+Species,Pathway,Energy_Eh,Relative_Energy_kcal_mol,Description
+Substrate,A,-25.744993570623,2.16,N2-Me isomer (N adjacent to S methylated)
+TS,A,-25.719651120122,18.07,TS for SO extrusion from N2-Me substrate
+Product,A,-20.622619772873,N/A,1-methyl-4-methylpyrazole (regioisomer A)
+Substrate,B,-25.748441936627,0.00,N3-Me isomer (N not adjacent to S methylated) - REFERENCE
+TS,B,-25.721984447427,16.60,TS for SO extrusion from N3-Me substrate
+Product,B,-20.622640547402,N/A,1-methyl-4-methylpyrazole (regioisomer B)
+SO,common,-7.237613130503,N/A,Sulfur monoxide product
+Activation_Energy,A,N/A,15.90,Barrier from A substrate to A TS
+Activation_Energy,B,N/A,16.60,Barrier from B substrate to B TS

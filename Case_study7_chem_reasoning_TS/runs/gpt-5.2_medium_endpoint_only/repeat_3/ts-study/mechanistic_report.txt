@@ -1,0 +1,33 @@
+Mechanistic inference from TS.png (simplified substituents)
+
+Edits applied (per instructions)
+- Ring carbon α to sulfur: Me
+- All other peripheral ring substituents: H
+- N-alkyl group in product: Me
+- The sulfur-containing substituent was modeled as a methyl sulfoxide group (–S(=O)Me) to give a fully specified, minimal structure.
+
+Interconverting starting structures (tautomeric substrates)
+- The neutral N–H pyrazole exists as two tautomers via proton transfer between the two ring nitrogens (1H ⇄ 2H pyrazole).
+
+Transformation modeled
+- N-alkylation (methylation): replacement of the N–H bond by N–Me on the N that bears H in the reacting tautomer.
+
+Pathway A
+- Substrate A: tautomer with H on ring nitrogen N1.
+- Product A: N1-methylated pyrazole (N1–Me).
+- SMILES used:
+  Substrate: [nH]1ncc(S(=O)C)c1C
+  Product:   Cn1ncc(S(=O)C)c1C
+
+Pathway B
+- Substrate B: tautomer with H on the other ring nitrogen N2.
+- Product B: N2-methylated pyrazole (N2–Me), regioisomeric with Product A.
+- SMILES used:
+  Substrate: n1[nH]cc(S(=O)C)c1C
+  Product:   n1n(C)cc(S(=O)C)c1C
+
+Generated geometries (XYZ)
+- ts-study/structures/pathway_A_substrate.xyz
+- ts-study/structures/pathway_A_product.xyz
+- ts-study/structures/pathway_B_substrate.xyz
+- ts-study/structures/pathway_B_product.xyz

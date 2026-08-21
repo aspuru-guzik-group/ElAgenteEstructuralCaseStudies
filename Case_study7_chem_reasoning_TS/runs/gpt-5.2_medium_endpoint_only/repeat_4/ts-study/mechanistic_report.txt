@@ -1,0 +1,27 @@
+Concise mechanistic interpretation (from TS.png) and simplified structures built
+
+Inferred from TS.png:
+- Reactant is an NH-pyrazole that can tautomerize (1H ⇌ 2H; the exchangeable N–H can reside on either ring nitrogen).
+- A sulfur-containing auxiliary/activating group is present in the depicted NH–TDSO structure (S=O-containing substituent in TS.png).
+- Net transformation: N-alkylation (here R = Me) giving a neutral N-alkyl pyrazole. The sulfur-containing auxiliary is not present in the product depiction in TS.png, so product models were built without the S-containing group.
+
+Substituent simplification applied (as requested):
+- Substituent on the ring carbon α to sulfur: Me.
+- All other peripheral ring substituents: H.
+- N-alkyl group installed at N: Me.
+
+Two tautomer-derived pathways (neutral, compositionally identical substrates):
+
+Pathway A
+- Substrate: 1H-tautomer (proton on ring N1).
+- Product: N1-methyl regioisomer (N1–Me).
+
+Pathway B
+- Substrate: 2H-tautomer (proton on ring N2).
+- Product: N2-methyl regioisomer (N2–Me).
+
+Written geometries (XYZ):
+- ts-study/structures/pathway_A_substrate.xyz
+- ts-study/structures/pathway_A_product.xyz
+- ts-study/structures/pathway_B_substrate.xyz
+- ts-study/structures/pathway_B_product.xyz

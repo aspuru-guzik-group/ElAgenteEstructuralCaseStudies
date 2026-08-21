@@ -1,0 +1,368 @@
+      -----------------------------------------------------------      
+     |                   =====================                   |     
+     |                           x T B                           |     
+     |                   =====================                   |     
+     |                         S. Grimme                         |     
+     |          Mulliken Center for Theoretical Chemistry        |     
+     |                    University of Bonn                     |     
+      -----------------------------------------------------------      
+
+   * xtb version 6.7.1 (edcfbbe) compiled by 'conda@3ef47c1a292c' on 2024-11-25
+
+   xtb is free software: you can redistribute it and/or modify it under
+   the terms of the GNU Lesser General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   
+   xtb is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Lesser General Public License for more details.
+   
+   Cite this work as:
+   * C. Bannwarth, E. Caldeweyher, S. Ehlert, A. Hansen, P. Pracht,
+     J. Seibert, S. Spicher, S. Grimme, WIREs Comput. Mol. Sci., 2020, 11,
+     e01493. DOI: 10.1002/wcms.1493
+   
+   for GFN2-xTB:
+   * C. Bannwarth, S. Ehlert and S. Grimme., J. Chem. Theory Comput., 2019,
+     15, 1652-1671. DOI: 10.1021/acs.jctc.8b01176
+   for GFN1-xTB:
+   * S. Grimme, C. Bannwarth, P. Shushkov, J. Chem. Theory Comput., 2017,
+     13, 1989-2009. DOI: 10.1021/acs.jctc.7b00118
+   for GFN0-xTB:
+   * P. Pracht, E. Caldeweyher, S. Ehlert, S. Grimme, ChemRxiv, 2019, preprint.
+     DOI: 10.26434/chemrxiv.8326202.v1
+   for GFN-FF:
+   * S. Spicher and S. Grimme, Angew. Chem. Int. Ed., 2020, 59, 15665-15673.
+     DOI: 10.1002/anie.202004239
+   
+   for ALPB and GBSA implicit solvation:
+   * S. Ehlert, M. Stahn, S. Spicher, S. Grimme, J. Chem. Theory Comput.,
+     2021, 17, 4250-4261. DOI: 10.1021/acs.jctc.1c00471
+   
+   for ddCOSMO and CPCM-X implicit solvation:
+   * M. Stahn, S. Ehlert, S. Grimme, J. Phys. Chem. A,
+     2023, XX, XXXX-XXXX. DOI: 10.1021/acs.jpca.3c04382
+   
+   for DFT-D4:
+   * E. Caldeweyher, C. Bannwarth and S. Grimme, J. Chem. Phys., 2017,
+     147, 034112. DOI: 10.1063/1.4993215
+   * E. Caldeweyher, S. Ehlert, A. Hansen, H. Neugebauer, S. Spicher,
+     C. Bannwarth and S. Grimme, J. Chem. Phys., 2019, 150, 154122.
+     DOI: 10.1063/1.5090222
+   * E. Caldeweyher, J.-M. Mewes, S. Ehlert and S. Grimme, Phys. Chem. Chem. Phys.
+     2020, 22, 8499-8512. DOI: 10.1039/D0CP00502A
+   
+   for sTDA-xTB:
+   * S. Grimme and C. Bannwarth, J. Chem. Phys., 2016, 145, 054103.
+     DOI: 10.1063/1.4959605
+   
+   in the mass-spec context:
+   * V. Asgeirsson, C. Bauer and S. Grimme, Chem. Sci., 2017, 8, 4879.
+     DOI: 10.1039/c7sc00601b
+   * J. Koopman and S. Grimme, ACS Omega 2019, 4, 12, 15120-15133.
+     DOI: 10.1021/acsomega.9b02011
+   
+   for metadynamics refer to:
+   * S. Grimme, J. Chem. Theory Comput., 2019, 155, 2847-2862
+     DOI: 10.1021/acs.jctc.9b00143
+   
+   for SPH calculations refer to:
+   * S. Spicher and S. Grimme, J. Chem. Theory Comput., 2021, 17, 1701-1714
+     DOI: 10.1021/acs.jctc.0c01306
+   
+   for ONIOM refer to:
+   * C. Plett, A. Katbashev, S. Ehlert, S. Grimme, M. Bursch,
+     Phys. Chem. Chem. Phys., 2023, 25, 17860-17868. DOI: 10.1039/D3CP02178E
+   
+   for DIPRO refer to:
+   * J. Kohn, N. Gildemeister, S. Grimme, D. Fazzi, A. Hansen,
+     J. Chem. Phys., 2023, just accepted.
+   
+   for PTB refer to:
+   * S. Grimme, M. Mueller, A. Hansen, J. Chem. Phys., 2023, 158, 124111.
+     DOI: 10.1063/5.0137838
+   
+   with help from (in alphabetical order)
+   P. Atkinson, C. Bannwarth, F. Bohle, G. Brandenburg, E. Caldeweyher
+   M. Checinski, S. Dohm, S. Ehlert, S. Ehrlich, I. Gerasimov, C. Hölzer
+   A. Katbashev, J. Kohn, J. Koopman, C. Lavigne, S. Lehtola, F. März, M. Müller,
+   F. Musil, H. Neugebauer, J. Pisarek, C. Plett, P. Pracht, F. Pultar,
+   J. Seibert, P. Shushkov, S. Spicher, M. Stahn, M. Steiner, T. Strunk,
+   J. Stückrath, T. Rose, and J. Unsleber
+   
+ * started run on 2026/08/20 at 08:43:03.729     
+   ID    Z sym.   atoms
+    1    6 C      1-3, 6
+    2    7 N      4, 5
+    3   16 S      7
+    4    8 O      8
+    5    1 H      9-16
+
+           -------------------------------------------------
+          |                Calculation Setup                |
+           -------------------------------------------------
+
+          program call               : xtb ../../structures/pathway_A_TS_optimized.xyz --hess --gfnff
+          coordinate file            : ../../structures/pathway_A_TS_optimized.xyz
+          omp threads                :                    16
+
+
+          ==================== Thresholds ====================
+          CN  :   150.00000
+          rep :   500.00000
+          disp:  2500.00000
+          HB1 :   250.00000
+          HB2 :   450.00000
+
+          Pauling EN used:
+          Z : 1  EN :  2.20
+          Z : 6  EN :  2.55
+          Z : 7  EN :  3.04
+          Z : 8  EN :  3.44
+          Z :16  EN :  2.58
+          electric field strengths (au): 0.000
+
+           ------------------------------------------------- 
+          |           Force Field Initialization            |
+           ------------------------------------------------- 
+
+          distances ...
+          ----------------------------------------
+          generating topology and atomic info file ...
+          pair mat ...
+          computing topology distances matrix with Floyd-Warshall algo ...
+          making topology EEQ charges ...
+          #fragments for EEQ constrain: 1
+          fragment charges from <charges> :  0.000
+          ----------------------------------------
+          generating topology and atomic info file ...
+          pair mat ...
+          computing topology distances matrix with Floyd-Warshall algo ...
+          making topology EEQ charges ...
+          #fragments for EEQ constrain: 1
+          fragment charges from <charges> :  0.000
+          rings ...
+          # BATM   122
+          # H in HB   2
+          doing iterative Hueckel for 1 subsystem(s) ...
+
+  atom   neighbors  erfCN metchar sp-hybrid imet pi  qest     coordinates
+    1  C       4    3.49   0.00         3    0    0  -0.056   -4.811116    1.246784   -0.800153
+    2  C       3    2.72   0.00         2    0    1  -0.026   -2.298023    0.066871   -0.612610
+    3  C       3    2.82   0.00         2    0    1   0.009   -1.357988   -1.871231    0.654058
+    4  N       3    2.82   0.00         3    0    1  -0.141    1.199754   -2.345140    0.753613
+    5  N       3    2.74   0.00         2    0    1  -0.106    2.780397   -0.882821   -0.866708
+    6  C       4    3.51   0.00         3    0    0  -0.029    4.760716    0.331695    0.569401
+    7  S       3    2.73   0.00         3    0    1   0.270    0.718174    1.866294   -2.348803
+    8  O       1    0.98   0.00         2    0    1  -0.407    1.199990    4.151074   -0.920942
+    9  H       1    0.97   0.00         0    0    0   0.053   -6.147960    0.274199    0.427787
+   10  H       1    0.97   0.00         0    0    0   0.053   -5.515253    1.175636   -2.736384
+   11  H       1    0.97   0.00         0    0    0   0.053   -4.709829    3.225103   -0.230446
+   12  H       1    0.97   0.00         0    0    0   0.056   -2.495400   -3.159567    1.764498
+   13  H       1    0.98   0.00         0    0    0   0.109    1.692244   -4.196136    0.644531
+   14  H       1    0.97   0.00         0    0    0   0.055    6.103462    1.134671   -0.766615
+   15  H       1    0.97   0.00         0    0    0   0.055    5.708412   -1.083358    1.727460
+   16  H       1    0.97   0.00         0    0    0   0.055    4.050441    1.839240    1.801119
+
+          #atoms :   16
+          #bonds :   16
+          #angl  :   27
+          #tors  :   37
+          #nmol  :   1
+          #optfrag :   1
+           ------------------------------------------------- 
+          |                   G F N - F F                   |
+          |          A general generic force-field          |
+          |                  Version 1.0.3                  | 
+           ------------------------------------------------- 
+          Number of HB bonds (bound hydrogen)     144
+          Number of HB bonds (unbound hydrogen)   36
+          Number of XB bonds                      0
+
+ E+G (total)                   0 d,  0 h,  0 min,  1.468 sec
+ distance/D3 list               ...        0 min,  0.000 sec (  0.000%)
+ non bonded repulsion           ...        0 min,  0.071 sec (  4.829%)
+ dCN                            ...        0 min,  0.000 sec (  0.002%)
+ EEQ energy and q               ...        0 min,  0.211 sec ( 14.385%)
+ D3                             ...        0 min,  0.164 sec ( 11.172%)
+ EEQ gradient                   ...        0 min,  0.150 sec ( 10.232%)
+ bonds                          ...        0 min,  0.343 sec ( 23.388%)
+ bend and torsion               ...        0 min,  0.219 sec ( 14.892%)
+ bonded ATM                     ...        0 min,  0.100 sec (  6.812%)
+ HB/XB (incl list setup)        ...        0 min,  0.210 sec ( 14.285%)
+
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+         ::                     SUMMARY                     ::
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+         :: total energy              -2.635974880653 Eh    ::
+         :: gradient norm              0.245366606751 Eh/a0 ::
+         ::.................................................::
+         :: bond energy               -2.734831216806 Eh    ::
+         :: angle energy               0.030614071393 Eh    ::
+         :: torsion energy             0.033155944965 Eh    ::
+         :: repulsion energy           0.137423857154 Eh    ::
+         :: electrostat energy        -0.091015851383 Eh    ::
+         :: dispersion energy         -0.009976438171 Eh    ::
+         :: HB energy                  0.000000000000 Eh    ::
+         :: XB energy                  0.000000000000 Eh    ::
+         :: bonded atm energy         -0.001345247803 Eh    ::
+         :: external energy            0.000000000000 Eh    ::
+         :: add. restraining           0.000000000000 Eh    ::
+         :: total charge              -0.000000000000 e     ::
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+           ------------------------------------------------- 
+          |                Numerical Hessian                |
+           ------------------------------------------------- 
+step length          :   0.00500
+SCC accuracy         :   0.30000
+Hessian scale factor :   1.00000
+frozen atoms in %    :   0.00000    0
+RMS gradient         :   0.24537 !! INCOMPLETELY OPTIMIZED GEOMETRY !!
+estimated CPU  time      0.00 min
+estimated wall time      0.00 min
+
+writing file <hessian>.
+
+ projected vibrational frequencies (cm⁻¹)
+eigval :       -0.00    -0.00    -0.00     0.00     0.00     0.00
+eigval :     -133.16   -86.82   -41.55   122.82   154.11   173.92
+eigval :      244.66   305.68   342.91   435.14   455.43   516.93
+eigval :      572.80   584.29   619.53   704.25   891.66   930.16
+eigval :      964.26  1004.64  1022.41  1044.78  1059.50  1075.88
+eigval :     1153.47  1268.98  1327.86  1334.15  1339.17  1349.61
+eigval :     1355.93  1397.38  1415.75  1660.04  2948.55  2977.77
+eigval :     3019.31  3040.73  3042.15  3046.62  3124.73  3437.25
+           -------------------------------------------------
+          |                Property Printout                |
+           -------------------------------------------------
+
+molecular dipole:
+                 x           y           z       tot (Debye)
+ q only:       -0.401      -1.108      -0.138       3.015
+           -------------------------------------------------
+          |               Frequency Printout                |
+           -------------------------------------------------
+ projected vibrational frequencies (cm⁻¹)
+eigval :       -0.00    -0.00    -0.00     0.00     0.00     0.00
+eigval :     -133.16   -86.82   -41.55   122.82   154.11   173.92
+eigval :      244.66   305.68   342.91   435.14   455.43   516.93
+eigval :      572.80   584.29   619.53   704.25   891.66   930.16
+eigval :      964.26  1004.64  1022.41  1044.78  1059.50  1075.88
+Molecule has no symmetry elements
+It seems to be the C1 point group
+eigval :     1153.47  1268.98  1327.86  1334.15  1339.17  1349.61
+eigval :     1355.93  1397.38  1415.75  1660.04  2948.55  2977.77
+eigval :     3019.31  3040.73  3042.15  3046.62  3124.73  3437.25
+ reduced masses (amu)
+   1: 14.29   2: 13.75   3: 20.15   4: 14.35   5: 13.08   6: 15.57   7: 11.86   8: 15.11
+   9:  4.87  10:  8.00  11:  3.34  12:  8.76  13: 12.78  14: 15.96  15: 15.89  16: 14.87
+  17:  9.24  18: 13.52  19: 10.96  20: 12.78  21:  8.88  22:  7.03  23:  7.44  24:  6.27
+  25:  6.81  26: 16.73  27:  7.13  28: 10.10  29:  7.52  30:  8.71  31:  6.60  32:  4.80
+  33:  1.78  34:  1.56  35:  4.79  36:  2.09  37:  4.09  38:  4.78  39:  4.14  40: 11.10
+  41:  1.42  42:  1.36  43:  2.10  44:  2.14  45:  2.15  46:  2.14  47:  1.92  48:  1.85
+ IR intensities (km·mol⁻¹)
+   1:  0.24   2:  0.80   3:  0.71   4:  0.05   5:  0.63   6:  0.40   7:  8.16   8:  2.85
+   9:  0.61  10:  2.72  11:  1.01  12:  3.16  13:  0.59  14:  0.28  15:  0.74  16:  3.84
+  17:  9.40  18:  0.65  19:  4.05  20:  4.07  21:  2.48  22:  0.43  23:  0.77  24:  0.22
+  25:  0.89  26:  5.67  27:  2.08  28:  3.33  29:  0.72  30:  0.74  31:  2.44  32:  0.45
+  33:  0.26  34:  0.52  35:  1.01  36:  2.82  37:  0.24  38:  0.49  39:  0.35  40:  0.06
+  41:  4.52  42:  0.22  43:  2.01  44:  0.84  45:  1.07  46:  0.23  47:  0.79  48:  5.24
+ Raman intensities (Ä⁴*amu⁻¹)
+   1:  0.00   2:  0.00   3:  0.00   4:  0.00   5:  0.00   6:  0.00   7:  0.00   8:  0.00
+   9:  0.00  10:  0.00  11:  0.00  12:  0.00  13:  0.00  14:  0.00  15:  0.00  16:  0.00
+  17:  0.00  18:  0.00  19:  0.00  20:  0.00  21:  0.00  22:  0.00  23:  0.00  24:  0.00
+  25:  0.00  26:  0.00  27:  0.00  28:  0.00  29:  0.00  30:  0.00  31:  0.00  32:  0.00
+  33:  0.00  34:  0.00  35:  0.00  36:  0.00  37:  0.00  38:  0.00  39:  0.00  40:  0.00
+  41:  0.00  42:  0.00  43:  0.00  44:  0.00  45:  0.00  46:  0.00  47:  0.00  48:  0.00
+ output can be read by thermo (or use thermo option).
+ writing <g98.out> molden fake output.
+ recommended (thermochemical) frequency scaling factor: 1.0
+           -------------------------------------------------
+          |             Thermodynamic Functions             |
+           -------------------------------------------------
+
+c1  symmetry found (for desy threshold:  0.10E+00) used in thermo
+
+          ...................................................
+          :                      SETUP                      :
+          :.................................................:
+          :  # frequencies                          39      :
+          :  # imaginary freq.                       3      :
+          :  linear?                             false      :
+          :  only rotor calc.                    false      :
+          :  symmetry                               c1      :
+          :  rotational number                       1      :
+          :  scaling factor                  1.0300000      :
+          :  rotor cutoff                   50.0000000 cm⁻¹ :
+          :  imag. cutoff                  -20.0000000 cm⁻¹ :
+          :.................................................:
+
+    mode    ω/cm⁻¹     T·S(HO)/kcal·mol⁻¹    T·S(FR)/kcal·mol⁻¹   T·S(vib)
+   ------------------------------------------------------------------------
+       1    126.50    -0.89401 ( 97.62%)    -0.78144 (  2.38%)    -0.89133
+       2    158.74    -0.76469 ( 99.03%)    -0.71422 (  0.97%)    -0.76419
+       3    179.14    -0.69690 ( 99.40%)    -0.67842 (  0.60%)    -0.69678
+       4    252.00    -0.51178 ( 99.85%)    -0.57734 (  0.15%)    -0.51189
+   ------------------------------------------------------------------------
+
+   temp. (K)  partition function   enthalpy   heat capacity  entropy
+                                   cal/mol     cal/K/mol   cal/K/mol   J/K/mol
+ 298.15  VIB   28.0                 3003.835     22.246     16.687
+         ROT  0.397E+06              888.752      2.981     28.598
+         INT  0.111E+08             3892.587     25.227     45.285
+         TR   0.147E+28             1481.254      4.968     40.531
+         TOT                        5373.8412    30.1955    85.8168   359.0576
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+normal termination of xtb
+
+       T/K    H(0)-H(T)+PV         H(T)/Eh          T*S/Eh         G(T)/Eh
+   ------------------------------------------------------------------------
+    298.15    0.856376E-02    0.129328E+00    0.407743E-01    0.885532E-01
+   ------------------------------------------------------------------------
+
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+         ::                  THERMODYNAMIC                  ::
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+         :: total free energy          -2.547421642600 Eh   ::
+         ::.................................................::
+         :: total energy               -2.635974880653 Eh   ::
+         :: zero point energy           0.120763818520 Eh   ::
+         :: G(RRHO) w/o ZPVE           -0.032210580468 Eh   ::
+         :: G(RRHO) contrib.            0.088553238053 Eh   ::
+         :::::::::::::::::::::::::::::::::::::::::::::::::::::
+imag cut-off (cm-1) :    5.00
+ found            3  significant imaginary frequencies
+ writing imag mode distorted coords to xtbhess.xyz
+ for further optimization.
+
+           -------------------------------------------------
+          | TOTAL ENERGY               -2.635974880653 Eh   |
+          | TOTAL ENTHALPY             -2.506647301014 Eh   |
+          | TOTAL FREE ENERGY          -2.547421642600 Eh   |
+          | GRADIENT NORM               0.245366606751 Eh/α |
+           -------------------------------------------------
+########################################################################
+[WARNING] Runtime exception occurred
+-2- hessian_numhess: Hessian on incompletely optimized geometry!
+-1- gfnff_setup: Could not read topology file.
+########################################################################
+
+------------------------------------------------------------------------
+ * finished run on 2026/08/20 at 08:43:08.021     
+------------------------------------------------------------------------
+ total:
+ * wall-time:     0 d,  0 h,  0 min,  4.293 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  4.752 sec
+ * ratio c/w:     1.107 speedup
+ SCF:
+ * wall-time:     0 d,  0 h,  0 min,  1.671 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  1.591 sec
+ * ratio c/w:     0.952 speedup
+ analytical hessian:
+ * wall-time:     0 d,  0 h,  0 min,  1.303 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  1.591 sec
+ * ratio c/w:     1.221 speedup
+

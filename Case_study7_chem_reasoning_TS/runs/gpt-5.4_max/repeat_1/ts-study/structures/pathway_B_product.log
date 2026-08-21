@@ -1,0 +1,6 @@
+Assembled product structure: optimized 1,3-dimethylpyrazole fragment + optimized SO fragment placed far apart.
+Energy components used in energies.csv (same-surface singlet model):
+E[1,3-dimethylpyrazole] = -20.623677073011 Eh
+E[SO singlet]           =  -7.237613118849 Eh
+E[sum]                  = -27.861290191860 Eh
+Reference triplet SO energy also saved in calculations/pathway_B/SO_triplet_opt.log.

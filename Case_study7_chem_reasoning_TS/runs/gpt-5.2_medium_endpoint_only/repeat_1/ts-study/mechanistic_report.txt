@@ -1,0 +1,30 @@
+Mechanistic summary (from TS.png; simplified substituents)
+
+What was taken from TS.png
+- The figure depicts conversion of an S(=O)-containing precursor (labeled “NH TDSO”) into an N-alkyl pyrazole via a transition state.
+- The alkyl group on N is denoted R; here it is set to Me.
+- Three peripheral ring substituent sites are shown as colored circles; here they are simplified to:
+  • ring carbon α to the S-containing group: Me
+  • all other peripheral ring substituents: H
+
+Key pre-equilibrium (pathway bifurcation)
+- The exchangeable pyrazole N–H can tautomerize between the two ring nitrogens prior to N-alkylation.
+- This gives two neutral, compositionally identical starting structures (A and B), which lead to two regioisomeric N-methyl products.
+
+Transformation modelled
+- Regioselective N-methylation of the pyrazole (N-alkylation), following the tautomer that places the proton on the nitrogen that will be alkylated.
+- The S(=O)-containing activating/leaving group present in the TS.png precursor was included only in the substrates (as drawn on the left of TS.png) and omitted from the products (as drawn on the right of TS.png).
+
+Pathway A
+- Substrate: tautomer with N1–H.
+- Product: N1-methylated pyrazole (N1–Me).
+Files:
+  ts-study/structures/pathway_A_substrate.xyz
+  ts-study/structures/pathway_A_product.xyz
+
+Pathway B
+- Substrate: tautomer with N2–H.
+- Product: N2-methylated pyrazole (N2–Me).
+Files:
+  ts-study/structures/pathway_B_substrate.xyz
+  ts-study/structures/pathway_B_product.xyz
