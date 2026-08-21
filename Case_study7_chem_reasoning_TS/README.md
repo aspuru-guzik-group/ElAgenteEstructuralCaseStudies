@@ -9,6 +9,8 @@ including incomplete or chemically incorrect runs.
 - `input.json` is the exact benchmark question. Its dependency file is embedded
   as base64 so the input is self-contained.
 - `inputs/TS.png` is the same dependency extracted for convenient inspection.
+- `full_ts_prompt.txt` is the exact full prompt transmitted to GPT-5.4 for the
+  transition-state benchmark.
 - `endpoint_only_prompt.txt` is the exact prompt used for the GPT-5.2 and Claude
   Opus 4.5 endpoint-only baselines.
 

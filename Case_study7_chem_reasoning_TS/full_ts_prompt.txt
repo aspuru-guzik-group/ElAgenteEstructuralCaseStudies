@@ -1,0 +1,15 @@
+Work autonomously and complete every requested subtask. Save all requested structures and reports as clearly named files in the working directory. Do not ask for confirmation. Using TS.png, set the substituent on the ring carbon alpha to sulfur to Me, all other peripheral ring substituents to H, and the N-alkyl group to Me. The exchangeable N-H can equilibrate between the two ring nitrogens before N-alkylation, producing two neutral, compositionally identical starting structures and two possible reaction pathways. Infer both starting structures, the transformation involved, and the corresponding products. For each pathway, build the substrate and product geometries, generate a transition-state guess by directly editing the substrate geometry, then refine it using Sella optTS at xTB level and verify it by frequency analysis. Report consistent relative energies for both pathways. Save all structures, calculations, energy data, and a concise mechanistic report. Use the following file structure: ts-study/
+├── structures/
+│   ├── pathway_A_substrate.xyz
+│   ├── pathway_A_TS_Initial_Guess.xyz
+│   ├── pathway_A_TS_optimized.xyz
+│   ├── pathway_A_product.xyz
+│   ├── pathway_B_substrate.xyz
+│   ├── pathway_B_TS_Initial_Guess.xyz
+│   ├── pathway_B_TS_optimized.xyz
+│   └── pathway_B_product.xyz
+├── calculations/
+│   ├── pathway_A/
+│   └── pathway_B/
+├── energies.csv
+└── report.md The dependency files are already available in your working directory: TS.png.
