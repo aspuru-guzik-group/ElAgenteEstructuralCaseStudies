@@ -1,0 +1,27 @@
+El Agente Estructural benchmark environment
+Captured: 2026-08-22
+
+Runtime
+Python 3.11.8
+
+Molecular and materials packages
+ASE 3.24.0
+RDKit 2024.9.6
+Open Babel 3.1.0
+spglib 2.6.0
+pymatgen 2025.10.7
+Sella 2.5.0
+xTB 6.7.1 (edcfbbe)
+
+Agent and service packages
+LangChain 1.1.0
+LangGraph 1.0.4
+OpenAI Python SDK 2.6.0
+Anthropic Python SDK 0.116.0
+PyMongo 4.6.1
+Flask 3.1.0
+
+Benchmark model configurations
+Cases 1-6: GPT-5.5, high reasoning effort
+Case 7 full workflow: GPT-5.4, maximum reasoning effort
+Case 7 endpoint-only baseline: Claude Opus 4.5, high reasoning effort

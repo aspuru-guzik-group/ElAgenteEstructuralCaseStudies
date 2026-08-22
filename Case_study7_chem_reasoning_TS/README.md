@@ -4,6 +4,10 @@ This directory contains the Case Study 7 benchmark input and artifacts reported
 for GPT-5.4 and Claude Opus 4.5. Outputs are preserved as generated,
 including incomplete or chemically incorrect runs.
 
+The repository-level `SOFTWARE_VERSIONS.txt` records the runtime, molecular
+software, agent-framework dependencies, and model configurations used for the
+reported benchmarks.
+
 ## Input
 
 - `input.json` is the exact benchmark question. Its dependency file is embedded
