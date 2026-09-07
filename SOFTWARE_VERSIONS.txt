@@ -22,6 +22,6 @@ PyMongo 4.6.1
 Flask 3.1.0
 
 Benchmark model configurations
-Cases 1-6: GPT-5.5, high reasoning effort
+Cases 1-6: GPT-5.4, medium reasoning effort
 Case 7 full workflow: GPT-5.4, maximum reasoning effort
 Case 7 endpoint-only baseline: Claude Opus 4.5, high reasoning effort
