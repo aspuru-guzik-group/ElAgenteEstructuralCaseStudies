@@ -86,11 +86,13 @@ The following directories are located under `model_comparison/`. Each directory 
 
 ## Viewing Agent Traces
 
-The `.mhtml` files in each run were saved locally from the GUI of the Estructural web platform and preserve the platform's trace layout.
-The `.mhtml` files are locally saved snapshots of the Estructural web interface. GitHub does not render these files as interactive webpages. Please download the file and open it in a web browser to view the original interface and expand/collapse the tool and reasoning details.
+> **Note:** The web-viewable agent traces are currently being updated and will be added to this repository.
+
+The agent traces preserve the layout of the Estructural web-platform GUI, as illustrated below.
 
 ![Estructural web-platform trace interface](assets/estructural_gui.png)
 
-Within a trace, the **Thinking** and **Tool** sections can be expanded or collapsed by clicking their headers. Expanding a tool call shows details such as the arguments passed to the tool and the returned values.
+In the trace viewer, the **Thinking** and **Tool** sections can be expanded or collapsed by clicking their headers. Expanding a tool call displays details including the arguments passed to the tool and the returned values.
 
 ![Example of expanded tool-call details](assets/trace_tool_details.png)
+
