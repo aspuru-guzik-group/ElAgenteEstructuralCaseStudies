@@ -87,6 +87,7 @@ The following directories are located under `model_comparison/`. Each directory 
 ## Viewing Agent Traces
 
 The `.mhtml` files in each run were saved locally from the GUI of the Estructural web platform and preserve the platform's trace layout.
+The `.mhtml` files are locally saved snapshots of the Estructural web interface. GitHub does not render these files as interactive webpages. Please download the file and open it in a web browser to view the original interface and expand/collapse the tool and reasoning details.
 
 ![Estructural web-platform trace interface](assets/estructural_gui.png)
 
