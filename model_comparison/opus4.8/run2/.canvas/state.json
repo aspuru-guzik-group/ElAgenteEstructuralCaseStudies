@@ -1,0 +1,19 @@
+{
+  "session": "Case6_3",
+  "state": {
+    "atomCount": 0,
+    "connected": true,
+    "labelsVisible": false,
+    "loaded": false,
+    "loadedMolecule": {
+      "animate": false,
+      "commandFile": "",
+      "file": "",
+      "name": "",
+      "source": "",
+      "style": ""
+    },
+    "selectedAtoms": [],
+    "spinning": false
+  }
+}

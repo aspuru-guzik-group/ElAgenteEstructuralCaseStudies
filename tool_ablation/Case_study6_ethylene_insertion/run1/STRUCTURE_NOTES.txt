@@ -1,0 +1,7 @@
+Files:
+  reactant.xyz : [Cp2Zr(CH3)(eta2-C2H4)]+ approximate 3D structure
+  ts_like.xyz  : insertion TS-like geometry (illustrative, not optimized)
+  product.xyz  : [Cp2Zr(CH2CH2CH3)]+ approximate 3D structure
+
+Interpretation: migratory insertion of coordinated ethylene into the zirconium-methyl bond of a cationic zirconocene complex.
+The TS-like model is schematic/approximate and should be refined before any energetic use.

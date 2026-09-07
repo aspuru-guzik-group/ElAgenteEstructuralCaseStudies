@@ -1,0 +1,4 @@
+reactant.xyz: atoms=31, min interatomic distance=1.08 Å between indices (7, 8)
+ts_like.xyz: atoms=31, min interatomic distance=1.08 Å between indices (7, 8)
+product.xyz: atoms=31, min interatomic distance=1.08 Å between indices (7, 8)
+These are approximate hand-built geometries intended as plausible 3D starting structures, not optimized stationary points.
