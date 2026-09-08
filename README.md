@@ -17,9 +17,13 @@ Directory/
 
 Each `run` directory contains the files associated with that independent run, including the corresponding input file(s), output geometry file(s), and agent trace (`.mhtml`).
 
-`Case_study7_chem_reasoning_TS/` uses a different directory structure. Please refer to the separate `README.md` within that directory for details.
+The primary case-study benchmark directories are located under `Case_study/`. Additional evaluation datasets are organized separately under `robustness_test/`, `configuration_test/`, `tool_ablation/`, and `model_comparison/`.
+
+`Case_study/Case_study7_chem_reasoning_TS/` uses a different directory structure.
 
 ## Case-Study Benchmarks
+
+The following project directories are located under `Case_study/`.
 
 | Directory | Corresponding Figure |
 | --- | --- |
@@ -86,13 +90,13 @@ The following directories are located under `model_comparison/`. Each directory 
 
 ## Viewing Agent Traces
 
-> **Note:** The web-viewable agent traces are currently being updated and will be added to this repository.
+> **Note:** The `.mhtml` files are unedited local snapshots of the Estructural web-platform GUI. GitHub does not render `.mhtml` files as webpages, so please download the files and open them locally in a web browser to view the original interactive traces.
 
 The agent traces preserve the layout of the Estructural web-platform GUI, as illustrated below.
 
 ![Estructural web-platform trace interface](assets/estructural_gui.png)
 
-In the trace viewer, the **Thinking** and **Tool** sections can be expanded or collapsed by clicking their headers. Expanding a tool call displays details including the arguments passed to the tool and the returned values.
+In the saved trace, the **Thinking** and **Tool** sections can be expanded or collapsed by clicking their headers. 
 
 ![Example of expanded tool-call details](assets/trace_tool_details.png)
 
